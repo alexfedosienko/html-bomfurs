@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp",
-    "build": "NODE_ENV=build gulp build",
-    "deploy": "npm run build && node deploy.js"
+    "build": "NODE_ENV=build gulp build"
   },
   "repository": {
     "type": "git",
@@ -36,7 +35,9 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
+    "gulp-uglify": "^3.0.2",
     "jquery": "^3.7.1",
     "jquery.inputmask": "^3.3.4",
     "nouislider": "^15.8.1",

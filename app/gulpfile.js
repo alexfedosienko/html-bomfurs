@@ -11,6 +11,11 @@ const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
 const fileinclude = require('gulp-file-include');
 const replace = require('gulp-replace');
+const gulpIf = require('gulp-if');
+
+const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
+
+console.log('Mode: ' + (isDev ? 'DEV' : 'BUILD'));
 
 const addCssBefore = [
   './node_modules/normalize.css/normalize.css',
@@ -54,18 +59,9 @@ const htmlDir = [
   `${dirs.blocks}/**/*.html`,
   `${dirs.include}/**/*.html`,
 ];
-const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
-
-// const otherFiles = [
-//   'src/sitemap.xml',
-//   'src/robots.txt'
-// ];
-
-// const fonts = [
-//   'node_modules/simple-line-icons/dist/fonts/**/*'
-// ];
 
 const cleanBuild = () => gulp.src(dirs.build + '/*', { read: false }).pipe(clean());
+
 const buildHtml = () => {
   return gulp.src(htmlDir[0])
     .pipe(fileinclude({
@@ -95,15 +91,18 @@ const buildImg = () => {
 const buildStyles = () => {
   return gulp.src(addCssBefore.concat(styleDir))
     .pipe(concat('style.min.css'))
-    .pipe(sourcemaps.init())
+
+    .pipe(gulpIf(isDev, sourcemaps.init()))
+
     .pipe(sass({
         outputStyle: 'expanded'
       }).on("error", notify.onError()))
+
     .pipe(autoprefixer(['last 5 versions']))
 
-    // .pipe(cleanCSS())
+    .pipe(gulpIf(!isDev, cleanCSS()))
+    .pipe(gulpIf(isDev, sourcemaps.write('')))
 
-    .pipe(sourcemaps.write(''))
     .pipe(gulp.dest(dirs.buildStyles))
     .pipe(browserSync.reload({
       stream: true
@@ -111,8 +110,10 @@ const buildStyles = () => {
 };
 
 const buildJs = () => {
+  const uglify = require('gulp-uglify');
   return gulp.src(addJsBefore.concat(jsDir))
     .pipe(concat('script.min.js'))
+    .pipe(gulpIf(!isDev, uglify()))
     .pipe(gulp.dest(dirs.buildJs))
     .pipe(browserSync.reload({
       stream: true
@@ -146,4 +147,5 @@ gulp.task('build', gulp.series(
   buildJs,
   buildHtml,
 ));
+
 gulp.task('default', gulp.parallel('build', watch));

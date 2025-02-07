@@ -1,5 +1,6 @@
 node_modules/
 build/
+svg-source/
 .DS_Store
-src/Архив.zip
+Архив.zip
 todo

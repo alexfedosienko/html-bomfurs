@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('img[data-src]').each((i,img) => img.src = img.dataset.src);
+  $('img[data-src]').each(function(i,img) { img.src = img.dataset.src });
   $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-99-99"});
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -91,7 +91,7 @@ $(document).ready(function() {
 
   $('body').on('click', '[data-rslider]', function(e) {
     e.preventDefault();
-    let slider = $(this).data('rslider');
+    var slider = $(this).data('rslider');
     if ($('#' + slider).length <= 0) return;
     $('.page-backdrop').addClass('page-backdrop--open');
     $('#' + slider).addClass('right-slider--open');
@@ -117,11 +117,11 @@ $(document).ready(function() {
   });
 
   $('body')
-    .on('mouseenter', '.page-header__menu-item--dropdown', (e) => {
+    .on('mouseenter', '.page-header__menu-item--dropdown', function () {
       $(this).find('.dropdown-menu').addClass('dropdown-menu--open');
       $('.page-backdrop').addClass('page-backdrop--open');
     })
-    .on('mouseleave', '.page-header__menu-item--dropdown', () => {
+    .on('mouseleave', '.page-header__menu-item--dropdown', function () {
       $(this).find('.dropdown-menu').removeClass('dropdown-menu--open');
       $('.page-backdrop').removeClass('page-backdrop--open');
     });
@@ -156,16 +156,17 @@ $(document).ready(function() {
   });
 
 
-  const setIndicatorValue = (indicator, value) => {
+  function setIndicatorValue(indicator, value) {
     if ($(indicator).length) {
       $(indicator).text(value + ' ₽');
     }
-    if ($(`input${indicator}`).length) {
+
+    if ($('input' + indicator).length) {
       $(indicator).val(value);
     }
   }
 
-  $('.field-range-slider .range-slider').each((i, item) => {
+  $('.field-range-slider .range-slider').each(function(i, item) {
     noUiSlider.create(item, {
       start: [$(item).data('start'), $(item).data('end')],
       step: 1,
@@ -174,7 +175,7 @@ $(document).ready(function() {
         'max': $(item).data('max')
       },
     });
-    item.noUiSlider.on('update', (values, handle) => {
+    item.noUiSlider.on('update', function(values, handle) {
       setIndicatorValue($(item).data('left-indicator'), values[0]);
       setIndicatorValue($(item).data('right-indicator'), values[1]);
     });
@@ -182,9 +183,9 @@ $(document).ready(function() {
 
   $('body').on('keydown', '.code-input input', function(e) { $(this).val('') });
   $('body').on('keyup', '.code-input input', function(e) {
-    const $wrap = $(this).closest('.code-input');
-    const $inputs = $(this).closest('.code-input').find('input[type="number"]');
-    const $val = $(this).val();
+    var $wrap = $(this).closest('.code-input');
+    var $inputs = $(this).closest('.code-input').find('input[type="number"]');
+    var $val = $(this).val();
 
     // Ввод только цифр и не больше 10
     if ($val == $val.replace(/[0-9]/, '') || $val > 10) {
@@ -200,7 +201,7 @@ $(document).ready(function() {
     $inputs.eq($inputs.index(this) + 1).focus();
 
     // Заполнение input hidden
-    let fullval = '';
+    var fullval = '';
     $inputs.each(function() {
       fullval = fullval + (parseInt($(this).val()) || '0')
     });
