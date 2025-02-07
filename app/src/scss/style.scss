@@ -198,6 +198,12 @@ img {
 
   &__img-wrapper {
     margin: 0 -20px 0 -20px;
+    height: 510px;
+
+    @media screen and (max-width: $screen-sm - 1) {
+      background-size: cover;
+      background-position: 50%;
+    }
   }
 }
 
