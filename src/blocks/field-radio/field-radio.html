@@ -1,0 +1,20 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/field-radio/field-radio.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="field-radio">content</div>
+
+-->
+
+<label class="field-radio">
+  <input type="radio" name="@@name" class="field-radio__input" @@if (checked === true) { checked }>
+  <span class="field-radio__title">@@title</span>
+</label>
+

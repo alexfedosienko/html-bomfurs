@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока basket-item, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.basket-item {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 20px 0;
+  display: flex;
+  border-top: 1px solid #F2F2F2;
+
+  &__img-wrapper {
+    max-width: 160px;
+    margin-right: 20px;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    a,
+    .price__value {
+      font-weight: 500;
+    }
+
+    .price {
+      flex-direction: column;
+    }
+
+    .price__value--old {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__prop {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex: 1;
+
+    &-item {
+      margin-bottom: 4px;
+
+      span {
+
+        &:nth-child(1) {
+          font-weight: 500;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 130%;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+}

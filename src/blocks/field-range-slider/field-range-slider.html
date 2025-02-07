@@ -1,0 +1,21 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/field-range-slider/field-range-slider.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="field-range-slider">content</div>
+
+-->
+<div class="field-range-slider">
+  <div class="field-range-slider__values">
+    <span class="field-range-slider__value" id="min">10 000 ₽</span>
+    <span class="field-range-slider__value" id="max">150 000 ₽</span>
+  </div>
+  <div class="range-slider" data-min="0" data-max="1000" data-start="0" data-end="1000" data-left-indicator=".field-range-slider #min" data-right-indicator=".field-range-slider #max"></div>
+</div>

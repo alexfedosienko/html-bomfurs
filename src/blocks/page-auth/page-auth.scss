@@ -1,0 +1,89 @@
+// В этом файле должны быть стили для БЭМ-блока page-auth, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.page-auth {
+
+  $block-name:                &; // #{$block-name}__element
+
+  height: 100vh;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    height: 100%;
+
+    @media screen and (max-width: $screen-md - 1) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__col {
+    width: 100%;
+    height: 100%;
+
+    &--bg {
+      background-repeat: no-repeat;
+      background-image: url('../img/bg-auth.jpg');
+      background-size: cover;
+
+      @media screen and (max-width: $screen-md - 1) {
+        display: none;
+      }
+    }
+
+    &--form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px;
+
+      @media screen and (max-width: $screen-md - 1) {
+        padding: 0 20px;
+      }
+
+      .form-wrapper {
+        max-width: 520px;
+        width: 100%;
+
+        @media screen and (max-width: $screen-md - 1) {
+          // max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__login-by-email {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+
+    .link {
+      text-align: right;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .btn-group {
+
+  }
+
+  .code-input {
+    margin-bottom: 40px;
+  }
+
+  .w630 {
+    width: 630px;
+    max-width: 630px;
+
+    @media screen and (max-width: 670px) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

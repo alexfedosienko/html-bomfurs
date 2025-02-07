@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="page-account">
+      <div class="page-account__horizont-menu">
+        <ul class="horizont-menu">
+          <li class="horizont-menu__item"><a href="/account-orders-current.html" class="horizont-menu__link active">ЗАКАЗЫ</a></li>
+          <li class="horizont-menu__item"><a href="/account-profile.html" class="horizont-menu__link">ПРОФИЛЬ</a></li>
+          <li class="horizont-menu__item"><a href="/account-whishlist.html" class="horizont-menu__link">ИЗБРАННЫЕ</a></li>
+          <li class="horizont-menu__item"><a href="/account-basket.html" class="horizont-menu__link">КОРЗИНА</a></li>
+        </ul>
+      </div>
+      <div class="page-account__horizont-menu">
+        <ul class="horizont-menu">
+          <li class="horizont-menu__item"><a href="/account-orders-current.html" class="horizont-menu__link active">ТЕКУЩИЕ (1)</a></li>
+          <li class="horizont-menu__item"><a href="/account-orders-recivied.html" class="horizont-menu__link">ДОСТАВЛЕННЫЕ (2)</a></li>
+          <li class="horizont-menu__item"><a href="/account-orders-review.html" class="horizont-menu__link">НА РАССМОТРЕНИИ (1)</a></li>
+          <li class="horizont-menu__item"><a href="/account-orders-canceled.html" class="horizont-menu__link">ОТМЕНЕННЫЕ (1)</a></li>
+        </ul>
+      </div>
+
+      <div class="page-account__wrapper">
+        <div class="w660">
+          @@include('../blocks/order-item/order-item.html', {'date': '01.12.2024', 'status': 'создан'})
+
+          <div class="page-account__basket">
+            <div class="page-account__basket-title">В ВАШЕЙ корзине</div>
+            <div class="page-account__basket-items">
+              @@include('../blocks/basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 0})
+              @@include('../blocks/basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 10})
+            </div>
+            <div class="page-account__basket-action">
+              <a href="#" class="btn btn--dblock btn--outline">КОРЗИНа (12)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

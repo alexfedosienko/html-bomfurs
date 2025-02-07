@@ -1,0 +1,18 @@
+// В этом файле должны быть стили для БЭМ-блока accordion, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.accordion {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__open {
+
+    #{$block-name}__body {
+      display: block;
+    }
+  }
+
+  &__body {
+    display: none;
+  }
+}

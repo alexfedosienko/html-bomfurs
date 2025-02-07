@@ -1,0 +1,63 @@
+// В этом файле должны быть стили для БЭМ-блока contact, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.contacts {
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 96px;
+    grid-row-gap: 96px;
+    max-width: 780px;
+
+    @media screen and (max-width: 820px) {
+      max-width: 100%;
+      padding: 20px;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+
+    @media screen and (max-width: 390px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+}
+
+.contact {
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__worktime {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+}

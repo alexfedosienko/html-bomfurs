@@ -1,0 +1,37 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/field-select/field-select.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="field-select">content</div>
+
+-->
+<div class="field-select">
+  <input type="hidden">
+  @@if (title.length > 0) {
+  <div class="field-select__title">@@title</div>
+  }
+  <div class="field-select__wrapper">
+    @@if (typeof selectedValue == undefined) {
+    <div class="field-select__value">Не выбрано</div>
+    }
+    @@if (typeof selectedValue != undefined) {
+    <div class="field-select__value">@@selectedValue</div>
+    }
+    <div class="field-select__items-wrapper">
+      <div class="field-select__items">
+        <div class="field-select__item field-select__item--selected">Не выбрано 1</div>
+        <div class="field-select__item">Не выбрано 2</div>
+        <div class="field-select__item">Не выбрано 3</div>
+        <div class="field-select__item">Не выбрано 4</div>
+        <div class="field-select__item">Не выбрано 5</div>
+      </div>
+    </div>
+  </div>
+</div>

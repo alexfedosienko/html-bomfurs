@@ -1,0 +1,80 @@
+// В этом файле должны быть стили для БЭМ-блока checkout-summary, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.checkout-summary {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding: 20px 0;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      span {
+        font-size: 13px;
+        line-height: 130%;
+        text-transform: uppercase;
+      }
+
+      &--result {
+        margin-top: 12px;
+
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__action {
+    padding: 20px 0;
+
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+
+  &__help {
+    padding: 20px 0;
+
+    &-link {
+      @include right-arrow();
+      display: inline-block;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+
+      a {
+        transition: all 0.2s ease;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        &:nth-child(1) {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

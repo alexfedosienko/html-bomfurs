@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="page-checkout">
+      <div class="w1265">
+        <div class="page-checkout__horizont-menu">
+          <ul class="horizont-menu">
+            <li class="horizont-menu__item"><a href="/checkout-1.html" class="horizont-menu__link active">ПОЛУЧАТЕЛЬ</a></li>
+            <li class="horizont-menu__item"><a href="/checkout-2.html" class="horizont-menu__link">ДОСТАВКА</a></li>
+            <li class="horizont-menu__item"><a href="/checkout-3.html" class="horizont-menu__link">ОПЛАТА</a></li>
+          </ul>
+        </div>
+
+        <div class="page-checkout__row">
+          <div class="page-checkout__col">
+            <div class="page-checkout__title">Личные данные</div>
+            <form action="#">
+              @@include('../blocks/field-input/field-input.html', {'title': 'Имя', 'isError': false, 'placeholder': 'Имя'})
+              @@include('../blocks/field-input/field-input.html', {'title': 'ФАМИЛИЯ', 'isError': false, 'placeholder': 'ФАМИЛИЯ'})
+              @@include('../blocks/field-input/field-input.html', {'title': 'ДАТА РОЖДЕНИЯ', 'isError': false, 'placeholder': 'ДАТА РОЖДЕНИЯ'})
+              <div class="radio-group">
+                <div class="radio-group__title">Пол</div>
+                <div class="radio-group__radio">
+                  @@include('../blocks/field-radio/field-radio.html', {'title': 'Женский', 'isError': false, 'placeholder': '', 'checked': true})
+                  @@include('../blocks/field-radio/field-radio.html', {'title': 'Мужской', 'isError': false, 'placeholder': '', 'checked': false})
+                </div>
+              </div>
+              @@include('../blocks/field-email/field-email.html', {'title': 'ПОЧТА', 'isError': false, 'placeholder': 'ПОЧТА'})
+              @@include('../blocks/field-phone/field-phone.html', {'title': 'НОМЕР ТЕЛЕФОНА', 'isError': false, 'placeholder': '+7 (999) 999-99-99'})
+              <a href="#" class="btn btn--dblock">Сохранить</a>
+              @@include('../blocks/field-checkbox/field-checkbox.html', {'title': 'Я ДАЮ СОГЛАСИЕ НА ПОЛУЧЕНИЕ РЕКЛАМНЫХ РАССЫЛОК В ВИДЕ E‑MAIL, SMS, PUSH ИЛИ В мессенджерах'})
+            </form>
+          </div>
+          <div class="page-checkout__col">
+            <div class="page-checkout__basket-items">
+              @@include('../blocks/basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 0})
+              @@include('../blocks/basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 10})
+            </div>
+            @@include('../blocks/checkout-summary/checkout-summary.html')
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

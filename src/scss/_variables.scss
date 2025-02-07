@@ -1,0 +1,25 @@
+// Базовые цвета https://colorscheme.ru/color-converter.html
+
+// Ширины
+// 640, 768, 960, 1024, 1280 и 1440
+$screen-xs:                   0;
+$screen-sm:                   960px;
+$screen-md:                   1024px;
+$screen-lg:                   1280px;
+$screen-xl:                   1440px;
+
+$container-sm:                100%;
+$container-md:                $screen-md - 30;
+$container-lg:                $screen-lg - 30;
+$container-xl:                1440px;
+
+// Модульная сетка
+
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+
+$main-color: rgba(2, 36, 53, 0.6);
+$main-color2: #022435;
+$main-color-transperent: rgba(2, 36, 53, 0.06);
+$red-color: rgba(253, 33, 51, 0.6);
+$red-color-transperent: rgba(253, 33, 51, 0.06);

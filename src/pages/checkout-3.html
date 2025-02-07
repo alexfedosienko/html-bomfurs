@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="page-checkout">
+      <div class="w1265">
+        <div class="page-checkout__horizont-menu">
+          <ul class="horizont-menu">
+            <li class="horizont-menu__item"><a href="/checkout-1.html" class="horizont-menu__link">ПОЛУЧАТЕЛЬ</a></li>
+            <li class="horizont-menu__item"><a href="/checkout-2.html" class="horizont-menu__link">ДОСТАВКА</a></li>
+            <li class="horizont-menu__item"><a href="/checkout-3.html" class="horizont-menu__link active">ОПЛАТА</a></li>
+          </ul>
+        </div>
+
+        <div class="page-checkout__row">
+          <div class="page-checkout__col">
+            <div class="page-checkout__title">СПОСОБЫ ОПЛАТЫ</div>
+            <div class="page-checkout__radio-options">
+              <div class="radio-option radio-option--open">
+                <div class="radio-option__head">
+                  @@include('../blocks/field-radio/field-radio.html', {'title': 'СБП', 'isError': false, 'placeholder': '', 'checked': true})
+                  <img src="./img/payment-type/sbp.png" alt="" class="radio-option__head-img">
+                </div>
+              </div>
+              <div class="radio-option">
+                <div class="radio-option__head">
+                  @@include('../blocks/field-radio/field-radio.html', {'title': 'ЯНДЕКС СПЛИТ', 'isError': false, 'placeholder': '', 'checked': false})
+                  <img src="./img/payment-type/split.png" alt="" class="radio-option__head-img">
+                </div>
+              </div>
+              <div class="radio-option">
+                <div class="radio-option__head">
+                  @@include('../blocks/field-radio/field-radio.html', {'title': 'ДОЛЯМИ', 'isError': false, 'placeholder': '', 'checked': false})
+                  <img src="./img/payment-type/doli.png" alt="" class="radio-option__head-img">
+                </div>
+                <div class="radio-option__desc">
+                  ПРИ ОПЛАТЕ ЧАСТЯМИ ВЫ получите СКИДКУ ДО −20%. ТОЧНЫЙ РАЗМЕР СКИДКИ И ПЛАТЕЖЕЙ БУДУТ ДОСТУПНЫ В СЕРВИСЕ ЯНДЕКС.
+                </div>
+              </div>
+              <div class="radio-option">
+                <div class="radio-option__head">
+                  @@include('../blocks/field-radio/field-radio.html', {'title': 'SBER PAY', 'isError': false, 'placeholder': '', 'checked': false})
+                  <img src="./img/payment-type/sber-pay.png" alt="" class="radio-option__head-img">
+                </div>
+              </div>
+              <div class="radio-option">
+                <div class="radio-option__head">
+                  @@include('../blocks/field-radio/field-radio.html', {'title': 'НАЛИЧНЫМИ ПРИ ПОЛУЧЕНИИ', 'isError': false, 'placeholder': '', 'checked': false})
+                  <img src="./img/payment-type/cash.png" alt="" class="radio-option__head-img">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-checkout__col">
+            <div class="page-checkout__basket-items">
+              @@include('../blocks/basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 0})
+              @@include('../blocks/basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 10})
+            </div>
+
+            @@include('../blocks/checkout-summary/checkout-summary.html')
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

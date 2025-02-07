@@ -1,0 +1,20 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/field-email/field-email.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="field-email">content</div>
+
+-->
+
+<label class="field-email @@if (isError === true) { field-email--error } ">
+  <span class="field-email__title">@@title</span>
+  <input type="email" placeholder="@@placeholder" class="field-email__input">
+  <!-- <span class="field-input__description">Тут может быть написана ошибка</span> -->
+</label>

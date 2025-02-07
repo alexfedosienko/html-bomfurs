@@ -1,0 +1,106 @@
+// В этом файле должны быть стили для БЭМ-блока field-select, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.field-select {
+
+  $block-name:                &; // #{$block-name}__element
+  margin-bottom: 20px;
+
+  &__title {
+    display: block;
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 400;
+    color: $main-color;
+    margin-bottom: 8px;
+  }
+
+  &__wrapper {
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: calc(50% - 6px);
+      width: 12px;
+      height: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.999591 5.5002L5.9998 0.5L11 5.5002' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      transform: rotateZ(180deg);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__items-wrapper {
+    position: relative;
+  }
+
+  &--open {
+
+    #{$block-name}__items {
+      opacity: 1;
+      height: initial;
+    }
+
+    #{$block-name}__wrapper {
+
+      &:after {
+        transform: rotateZ(0);
+      }
+    }
+  }
+
+  &__items {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 4px;
+    overflow: hidden;
+    height: 0;
+    padding: 10px 12px;
+    background-color: #fff;
+    box-shadow: 0px 20px 30px 0px rgba(34, 60, 80, 0.1);
+  }
+
+  &__item {
+    padding: 4px 0;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    padding-left: 18px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #000;
+      top: 6px;
+      left: 0;
+    }
+
+    &--selected {
+      &:after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: #000;
+        top: 6px;
+        left: 3px;
+        top: 9px;
+      }
+    }
+  }
+
+  &__value {
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+}

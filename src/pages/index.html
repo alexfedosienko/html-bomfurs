@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <style>
+    body {
+      padding-top: 60px;
+    }
+    .success {
+      color: green;
+    }
+    .in_progress {
+      color: orange;
+    }
+    .not_started {
+      color: red;
+    }
+
+    .desc {
+      margin: 10px 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
+
+    .desc__item {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+    }
+
+    .desc__item span:nth-child(2) {
+      padding-left: 5px;
+    }
+
+    .desc__item span:nth-child(1) {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 15px;
+    }
+
+    .desc__item--success span:nth-child(1) {
+      background-color: green;
+    }
+
+    .desc__item--in-progress span:nth-child(1) {
+      background-color: orange;
+    }
+
+    .desc__item--not_started span:nth-child(1) {
+      background-color: red;
+    }
+
+    @media screen and (max-width: 600px) {
+      ul {
+        padding-left: 20px;
+        margin-top: 5px;
+      }
+    }
+
+  </style>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+    <div class="page-content">
+      <div class="container">
+        <section>
+          <h1>Список страниц</h1>
+
+          <ul class="desc">
+            <li class="desc__item desc__item--success"><span></span><span>Готово</span></li>
+            <li class="desc__item desc__item--in-progress"><span></span><span>Нужно доработать</span></li>
+            <li class="desc__item desc__item--not_started"><span></span><span>Не готово</span></li>
+          </ul>
+
+          <strong>Основные страницы</strong>
+          <ul>
+            <li><a href="main.html" class="success" target="_blank">Главная</a></li>
+            <br>
+
+            <li><a href="catalog-3p.html" class="success" target="_blank">Каталог товаров 3 товара</a></li>
+            <li><a href="catalog-4p.html" class="success" target="_blank">Каталог товаров 4 товара</a></li>
+            <li><a href="catalog-with-banner.html" class="success" target="_blank">Каталог товаров с баннером</a></li>
+            <li><a href="product.html" class="success" target="_blank">Товар</a></li>
+            <br>
+
+            <li><a href="account-auth-phone.html" class="success" target="_blank">Вход в личный кабинет (по телефону)</a></li>
+            <li><a href="account-auth-email.html" class="success" target="_blank">Вход в личный кабинет (по почте)</a></li>
+            <br>
+            <li><a href="account-auth-code-phone.html" class="success" target="_blank">Личный кабинет - ввод кода авторизации (по телефону)</a></li>
+            <li><a href="account-auth-code-email.html" class="success" target="_blank">Личный кабинет - ввод кода авторизации (по почте)</a></li>
+            <br>
+            <li><a href="account-auth-2.html" class="success" target="_blank">Личный кабинет - welcome</a></li>
+            <br>
+
+            <li><a href="account-orders-current-empty.html" class="success" target="_blank">Личный кабинет - заказы текущие (нет заказов)</a></li>
+            <li><a href="account-orders-current.html" class="success" target="_blank">Личный кабинет - заказы текущие</a></li>
+            <br>
+            <li><a href="account-orders-recivied.html" class="success" target="_blank">Личный кабинет - заказы доставленные</a></li>
+            <li><a href="account-orders-review.html" class="success" target="_blank">Личный кабинет - заказы на рассмотрениие</a></li>
+            <li><a href="account-orders-canceled.html" class="success" target="_blank">Личный кабинет - заказы отмененные</a></li>
+            <br>
+
+            <li><a href="account-profile.html" class="success" target="_blank">Личный кабинет - профиль</a></li>
+
+            <li><a href="account-basket.html" class="success" target="_blank">Личный кабинет - корзина</a></li>
+            <li><a href="account-whishlist.html" class="not_started" target="_blank">Личный кабинет - избранное</a></li>
+            <br>
+
+            <li><a href="checkout-1.html" class="success" target="_blank">Оформление заказа - получатель</a></li>
+            <li><a href="checkout-2.html" class="success" target="_blank">Оформление заказа - доставка</a></li>
+            <li><a href="checkout-3.html" class="success" target="_blank">Оформление заказа - оплата</a></li>
+            <li><a href="checkout-4.html" class="not_started" target="_blank">Оформление заказа - заказ оформлен (fix: mobile)</a></li>
+            <br>
+
+            <li><a href="contacts.html" class="success" target="_blank">Контакты</a></li>
+            <li><a href="faq.html" class="not_started" target="_blank">FAQ</a></li>
+            <li><a href="care-of-the-product.html" class="in_progress" target="_blank">Care of the product (fix: mobile)</a></li>
+            <li><a href="care-of-the-product-page.html" class="in_progress" target="_blank">Care of the product page (fix: mobile)</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <strong>Вопросы</strong>
+          <ol>
+            <li>Как отображать в аккаунте в заказе если больше двух товаров?</li>
+            <li>Где адаптив страниц faq, care of the product, care of the product page?</li>
+            <li>В чем разница между корзиной в лк и корзиной на сайте?</li>
+            <li>Где макет избранное? Почему только в мобилке есть макет?</li>
+            <li>На странице профиля в мобилке есть "Недавно смотрели" в десктопе нет</li>
+          </ol>
+        </section>
+      </div>
+    </div>
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

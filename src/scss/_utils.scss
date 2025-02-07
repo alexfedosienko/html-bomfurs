@@ -1,0 +1,98 @@
+@mixin input() {
+
+  $block-name: &; // #{$block-name}__element
+
+  display: block;
+  margin-bottom: 20px;
+
+  &__title {
+    display: block;
+    font-size: 14px;
+    line-height: 130%;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 10px 0px;
+    background-color: transparent;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    font-size: 16px;
+    line-height: 130%;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+
+  &__description {
+    display: block;
+    font-size: 12px;
+    line-height: 120%;
+    font-weight: 400;
+    color: rgba(2, 36, 53, 0.6);
+    margin-top: 4px;
+  }
+
+  &--search {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      right: 5px;
+      top: calc(50% - 7px);
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4001 5.70599C10.4001 8.41219 8.20632 10.606 5.50012 10.606C2.79393 10.606 0.600122 8.41219 0.600122 5.70599C0.600122 2.9998 2.79393 0.805994 5.50012 0.805994C8.20632 0.805994 10.4001 2.9998 10.4001 5.70599Z' stroke='black' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.0001 14.206L9.50006 9.70599' stroke='black' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  // &--error {
+  //   #{$block-name}__input {
+  //     border-color: $red-color;
+  //     color: $red-color;
+  //   }
+
+  //   #{$block-name}__title,
+  //   #{$block-name}__description {
+  //     color: $red-color;
+  //   }
+  // }
+}
+
+@mixin right-arrow() {
+  $block-name: &; // #{$block-name}__element
+
+  position: relative;
+  transition: all 0.2s ease;
+  padding-right: 14px;
+
+  &:hover {
+    opacity: 0.5;
+
+    &:after {
+      right: -10px;
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 6px;
+    height: 12px;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 6px);
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='12' viewBox='0 0 6 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 11.0004L5.5002 6.0002L0.5 1' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    transition: all 0.2s ease;
+  }
+}

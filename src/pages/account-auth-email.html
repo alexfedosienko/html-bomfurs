@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="page-auth">
+      <div class="page-auth__wrapper">
+        <div class="page-auth__col page-auth__col--bg"></div>
+        <div class="page-auth__col page-auth__col--form">
+          <div class="form-wrapper">
+            <p class="sm-title">ВОЙДИТЕ ИЛИ ЗАРЕГИСТРИРУЙТЕСЬ</p>
+            @@include('../blocks/field-email/field-email.html', {'title': 'Email', 'isError': false, 'placeholder': ''})
+            <div class="page-auth__login-by-email">
+              <a href="/account-auth-phone.html" class="link">ВОЙТИ ПО номеру</a>
+            </div>
+            <a href="/account-auth-code-email.html" class="btn btn--dblock">Продолжить</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

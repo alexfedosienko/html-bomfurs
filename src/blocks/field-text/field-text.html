@@ -1,0 +1,20 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/field-text/field-text.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="field-text">content</div>
+
+-->
+
+<label class="field-text @@if (isError === true) { field-text--error } ">
+  <span class="field-text__title">@@title</span>
+  <textarea class="field-text__input" placeholder="@@placeholder"></textarea>
+  <span class="field-text__description">Тут может быть написана ошибка</span>
+</label>

@@ -1,0 +1,77 @@
+// В этом файле должны быть стили для БЭМ-блока field-checkbox, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.field-checkbox {
+
+  $block-name:                &; // #{$block-name}__element
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  &--white {
+
+    #{$block-name}__title {
+
+      &:before {
+        background-color: #fff;
+        border: 1px solid #000;
+      }
+    }
+
+    #{$block-name}__input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+
+      &:checked {
+
+        & + #{$block-name}__title {
+
+          &:before {
+            background-color: #000;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66665 1L3.33331 5L1.33331 3.18182' stroke='white' stroke-width='0.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+          }
+        }
+      }
+    }
+
+  }
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked {
+
+      & + #{$block-name}__title {
+
+        &:before {
+          background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66665 1L3.33331 5L1.33331 3.18182' stroke='white' stroke-width='0.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 130%;
+    padding-left: 26px;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      background-color: #000;
+      background-repeat: no-repeat;
+      background-position: center center;
+      left: 0;
+      top: calc(50% - 8px);
+    }
+  }
+}

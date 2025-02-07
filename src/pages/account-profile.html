@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="page-account">
+      <div class="page-account__horizont-menu">
+        <ul class="horizont-menu">
+          <li class="horizont-menu__item"><a href="/account-orders-current.html" class="horizont-menu__link">ЗАКАЗЫ</a></li>
+          <li class="horizont-menu__item"><a href="/account-profile.html" class="horizont-menu__link active">ПРОФИЛЬ</a></li>
+          <li class="horizont-menu__item"><a href="/account-whishlist.html" class="horizont-menu__link">ИЗБРАННЫЕ</a></li>
+          <li class="horizont-menu__item"><a href="/account-basket.html" class="horizont-menu__link">КОРЗИНА</a></li>
+        </ul>
+      </div>
+      <div class="page-account__wrapper">
+        <div class="w660">
+          <form action="#">
+            @@include('../blocks/field-input/field-input.html', {'title': 'Имя', 'isError': false, 'placeholder': 'Имя'})
+            @@include('../blocks/field-input/field-input.html', {'title': 'ФАМИЛИЯ', 'isError': false, 'placeholder': 'ФАМИЛИЯ'})
+            @@include('../blocks/field-input/field-input.html', {'title': 'ДАТА РОЖДЕНИЯ', 'isError': false, 'placeholder': 'ДАТА РОЖДЕНИЯ'})
+            <div class="radio-group">
+              <div class="radio-group__title">Пол</div>
+              <div class="radio-group__radio">
+                @@include('../blocks/field-radio/field-radio.html', {'title': 'Женский', 'isError': false, 'placeholder': '', 'checked': true})
+                @@include('../blocks/field-radio/field-radio.html', {'title': 'Мужской', 'isError': false, 'placeholder': '', 'checked': false})
+              </div>
+            </div>
+            @@include('../blocks/field-email/field-email.html', {'title': 'ПОЧТА', 'isError': false, 'placeholder': 'ПОЧТА'})
+            @@include('../blocks/field-phone/field-phone.html', {'title': 'НОМЕР ТЕЛЕФОНА', 'isError': false, 'placeholder': '+7 (999) 999-99-99'})
+            <a href="#" class="btn btn--dblock">Сохранить</a>
+            @@include('../blocks/field-checkbox/field-checkbox.html', {'title': 'Я ДАЮ СОГЛАСИЕ НА ПОЛУЧЕНИЕ РЕКЛАМНЫХ РАССЫЛОК В ВИДЕ E‑MAIL, SMS, PUSH ИЛИ В мессенджерах'})
+          </form>
+        </div>
+      </div>
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

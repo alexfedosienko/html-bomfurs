@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="filter filter--margin-top">
+      <div class="filter__wrap">
+        <div class="filter__col">
+          @@include('../blocks/dropdown/dropdown.html', {'title': 'Дубленки'})
+          @@include('../blocks/dropdown/dropdown.html', {'title': 'ПО ВОЗРАСТАНИЮ ЦЕНЫ'})
+        </div>
+        <div class="filter__col">
+          <a href="/catalog-3p.html" class="filter__link">ПО 3 ТОВАРА</a>
+          <a href="#" class="filter__link" data-rslider="catalog-filter">ФИЛЬтрЫ</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="catalog-grid g-4">
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+      </div>
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

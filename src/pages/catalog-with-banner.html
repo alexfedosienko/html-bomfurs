@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="big-banner big-banner--small">
+      <div class="big-banner__desktop-img" style="background-image: url('./img/main-desktop-banner-1.jpg');"></div>
+      <div class="big-banner__mobile-img" style="background-image: url('./img/main-mobile-banner-1.jpg');"></div>
+
+      <a href="#" class="big-banner__player"></a>
+
+      <div class="big-banner__desc-wrapper">
+        <div class="big-banner__desc">
+          <div class="big-banner__discount">ДО 40%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter">
+      <div class="filter__wrap">
+        <div class="filter__col">
+          @@include('../blocks/dropdown/dropdown.html', {'title': 'Дубленки'})
+          @@include('../blocks/dropdown/dropdown.html', {'title': 'ПО ВОЗРАСТАНИЮ ЦЕНЫ'})
+        </div>
+        <div class="filter__col">
+          <a href="/catalog-with-banner.html" class="filter__link">ПО 3 ТОВАРА</a>
+          <a href="#" class="filter__link" data-rslider="catalog-filter">ФИЛЬтрЫ</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="catalog-grid g-3">
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        @@include('../blocks/product-item/product-item.html', {'name': 'Name', 'price': '23 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+      </div>
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

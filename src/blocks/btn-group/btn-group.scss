@@ -1,0 +1,18 @@
+// В этом файле должны быть стили для БЭМ-блока btn-group, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.btn-group {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  .btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .btn + .btn {
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,12 @@
+// В этом файле должны быть стили для БЭМ-блока label, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.label {
+
+  $block-name:                &; // #{$block-name}__element
+
+  font-size: 13px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #808080;
+}

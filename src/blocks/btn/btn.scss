@@ -1,0 +1,38 @@
+// В этом файле должны быть стили для БЭМ-блока btn, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+  padding: 10px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 130%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+
+  @media screen and (max-width: $screen-sm - 1) {
+
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &--dblock {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  &--outline {
+    background: #fff;
+    color: #000;
+  }
+}

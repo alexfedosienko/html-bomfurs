@@ -1,0 +1,50 @@
+// В этом файле должны быть стили для БЭМ-блока horizont-menu, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.horizont-menu {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media screen and (max-width: $screen-md - 1) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    margin: 0 5px;
+
+    @media screen and (max-width: $screen-md - 1) {
+      margin: 0 5px 8px 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 4px 0;
+    font-size: 14px;
+    line-height: 130%;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      opacity: 0.7;
+      border-bottom: 1px solid #000;
+    }
+
+    &.active {
+      font-weight: 500;
+      border-bottom: 2px solid #000;
+    }
+
+    @media screen and (max-width: $screen-md - 1) {
+      font-size: 13px;
+    }
+  }
+}

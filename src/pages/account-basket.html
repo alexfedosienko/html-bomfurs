@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="page-account">
+      <div class="page-account__horizont-menu">
+        <ul class="horizont-menu">
+          <li class="horizont-menu__item"><a href="/account-orders-current.html" class="horizont-menu__link">ЗАКАЗЫ</a></li>
+          <li class="horizont-menu__item"><a href="/account-profile.html" class="horizont-menu__link">ПРОФИЛЬ</a></li>
+          <li class="horizont-menu__item"><a href="/account-whishlist.html" class="horizont-menu__link">ИЗБРАННЫЕ</a></li>
+          <li class="horizont-menu__item"><a href="/account-basket.html" class="horizont-menu__link active">КОРЗИНА</a></li>
+        </ul>
+      </div>
+
+      <div class="page-account__wrapper">
+        <div class="w1265">
+          <div class="page-account__row">
+            <div class="page-account__col">
+              <div class="page-account__basket">
+                <div class="page-account__basket-items">
+                  @@include('../blocks/basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 0})
+                  @@include('../blocks/basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 10})
+                </div>
+              </div>
+            </div>
+            <div class="page-account__col">
+              <label class="field-input field-input--with-button">
+                <span class="field-input__wrap">
+                  <span class="field-input__title">Ввести промокод</span>
+                  <input type="text" placeholder="Промокод" class="field-input__input">
+                </span>
+                <a href="#" class="field-input__link">Применить</a>
+              </label>
+
+              @@include('../blocks/checkout-summary/checkout-summary.html')
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

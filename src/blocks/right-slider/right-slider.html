@@ -1,0 +1,316 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/right-slider/right-slider.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="right-slider">content</div>
+
+-->
+
+<div class="right-slider" id="contacts-slider">
+  <div class="right-slider__dialog">
+    <div class="right-slider__top">
+      <div class="right-slider__title">ОТПРАВИТЬ сообщение</div>
+      <a href="#" class="right-slider__close close"></a>
+    </div>
+    <div class="right-slider__middle">
+
+      <div class="right-slider__row">
+        <div class="right-slider__col">
+          @@include('../field-input/field-input.html', {'title': 'Имя', 'isError': false, 'placeholder': ''})
+        </div>
+        <div class="right-slider__col">
+          @@include('../field-input/field-input.html', {'title': 'Фамилия', 'isError': false, 'placeholder': ''})
+        </div>
+      </div>
+      @@include('../field-phone/field-phone.html', {'title': 'Телефон', 'isError': false, 'placeholder': ''})
+      @@include('../field-email/field-email.html', {'title': 'Email', 'isError': false, 'placeholder': ''})
+      @@include('../field-select/field-select.html', {'title': 'Тема', 'selectedValue': 'ИНФОРМАЦИЯ О продукте'})
+    </div>
+    <div class="right-slider__bottom">
+      <a href="#" class="btn btn--dblock">Отправить сообщение</a>
+      @@include('../field-checkbox/field-checkbox.html', {'title': 'Я ДАЮ СОГЛАСИЕ НА ПОЛУЧЕНИЕ РЕКЛАМНЫХ РАССЫЛОК В ВИДЕ E‑MAIL, SMS, PUSH ИЛИ В мессенджерах'})
+    </div>
+  </div>
+</div>
+
+<div class="right-slider" id="search-slider">
+  <div class="right-slider__dialog">
+    <div class="right-slider__top">
+      <div class="right-slider__title">ПОИСК</div>
+      <a href="#" class="right-slider__close close"></a>
+    </div>
+    <div class="right-slider__middle">
+
+      <label class="field-input field-input--search">
+        <input type="text" placeholder="Дубленки" class="field-input__input">
+      </label>
+
+      <p class="sm-title sm-title--left">ПОПУЛЯРНЫЕ ЗАПРОСЫ</p>
+      <ul class="popular-search-request">
+        <li class="popular-search-request__item"><a href="#" class="popular-search-request__link">ITEM ONE</a></li>
+        <li class="popular-search-request__item"><a href="#" class="popular-search-request__link">ITEM TWO</a></li>
+        <li class="popular-search-request__item"><a href="#" class="popular-search-request__link">ITEM THREE</a></li>
+        <li class="popular-search-request__item"><a href="#" class="popular-search-request__link">ITEM FOUR</a></li>
+      </ul>
+
+      <p class="sm-title sm-title--left">НЕДАВНО ПРОСМОТРЕННЫЕ</p>
+      <div class="catalog">
+        <div class="catalog-grid g-4">
+          @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        </div>
+      </div>
+
+
+    </div>
+    <div class="right-slider__bottom">
+      <a href="#" class="btn btn--dblock">СМОТРЕТЬ больше</a>
+    </div>
+  </div>
+</div>
+
+<div class="right-slider" id="product-more">
+  <div class="right-slider__dialog">
+    <div class="right-slider__top">
+      <div class="right-slider__title">ПОДРОБНЕЕ О ТОВАРЕ</div>
+      <a href="#" class="right-slider__close close"></a>
+    </div>
+    <div class="right-slider__middle">
+      <ul class="list-option">
+        <li class="list-option__item">
+          <span>ЦВЕТ</span>
+          <span>ЧЁРНЫЙ</span>
+        </li>
+        <li class="list-option__item">
+          <span>сезон</span>
+          <span>ЗИМА</span>
+        </li>
+        <li class="list-option__item">
+          <span>ТЕМПЕРАТУРНЫЙ РЕЖИМ</span>
+          <span>ОТ +5 ДО -20</span>
+        </li>
+        <li class="list-option__item">
+          <span>СТРАНА</span>
+          <span>КИТАЙ</span>
+        </li>
+        <li class="list-option__item">
+          <span>СОСТАВ И МАТЕРИАЛ</span>
+          <span>ПОЛИЭСТЕР, ИСКУСТВЕННЫЙ МЕХ, ЭКОМЕХ</span>
+        </li>
+        <li class="list-option__item">
+          <span>ОСОБЕННОСТИ</span>
+          <span>
+            ДВУХСТОРОННЯЯ<br>
+            НЕМУЩИЙСЯ МАТЕРИАЛ<br>
+            ВЕТРОЗАЩИТА<br>
+            НЕСЪЁМНЫЙ КАПЮШОН<br>
+            ПРОРЕЗНЫЕ КАРМАНЫ
+          </span>
+        </li>
+        <li class="list-option__item">
+          <span>КОМПЛЕКТАЦИЯ</span>
+          <span>
+            ДУБЛЕНКА ЖЕНСКАЯ ДЛЛИННАЯ<br>
+            ПОЯС 1 ШТ
+          </span>
+        </li>
+        <li class="list-option__item">
+          <span>РЕКОМЕНДАЦИИ ПО УХОДУ</span>
+          <span>
+            ПРОФЕССИОНАЛЬНАЯ ЧИСТКА<br>
+            ДЕЛИКАТНАЯ ХИМИЧЕСКАЯ ЧИСТКА<br>
+            СТИРКА ЗАПРЕЩЕНА
+          </span>
+        </li>
+        <li class="list-option__item">
+          <span>ПАРАМЕТРЫ МОДЕЛИ</span>
+          <span>
+            РОСТ МОДЕЛИ 170<br>
+            РАЗМЕР НА МОДЕЛИ 44
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="right-slider__bottom">
+      <div class="btn-group">
+        <a href="#" class="btn btn--outline">КОНСУЛЬТАЦИЯ</a>
+        <a href="#" class="btn" data-rslider-close>ЗАКРЫТЬ</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="right-slider" id="product-info-sizes">
+  <div class="right-slider__dialog">
+    <div class="right-slider__top">
+      <div class="right-slider__title">РАЗМЕРНАЯ СЕТКА И ОБМЕРЫ</div>
+      <a href="#" class="right-slider__close close"></a>
+    </div>
+    <div class="right-slider__middle">
+
+      <div class="product-info-sizes">
+        <ul class="horizont-menu">
+          <li class="horizont-menu__item"><a href="#" class="horizont-menu__link active">ТАБЛИЦА РАЗМЕРОВ</a></li>
+          <li class="horizont-menu__item"><a href="#" class="horizont-menu__link">ОБМЕРЫ ИЗДЕЛИЯ</a></li>
+        </ul>
+
+        <p class="product-info-sizes__desc">найдите В ТАБЛИЦЕ ПАРАМЕТРЫ, БЛИЗКИЕ К ВАШИМ, ЧТОБЫ ОПРЕДЕЛИТЬ СВОЙ РАЗМЕР</p>
+
+        <div class="responsive-table">
+          <table>
+            <tr>
+              <td>RU</td>
+              <td>42</td>
+              <td>44</td>
+              <td>46</td>
+              <td>48</td>
+              <td>50</td>
+              <td>52</td>
+              <td>54</td>
+              <td>56</td>
+            </tr>
+            <tr>
+              <td>ОБХВАТ ГРУДИ</td>
+              <td>82-86</td>
+              <td>86-90</td>
+              <td>90-94</td>
+              <td>94-98</td>
+              <td>98-102</td>
+              <td>102-106</td>
+              <td>106-110</td>
+              <td>110-114</td>
+            </tr>
+            <tr>
+              <td>ОБХВАТ ТАЛИИ</td>
+              <td>62-66</td>
+              <td>66-70</td>
+              <td>70-74</td>
+              <td>74-78</td>
+              <td>78-82</td>
+              <td>82-86</td>
+              <td>86-90</td>
+              <td>98-102</td>
+            </tr>
+            <tr>
+              <td>ОБХВАТ БЕДЕР</td>
+              <td>62-66</td>
+              <td>66-70</td>
+              <td>70-74</td>
+              <td>74-78</td>
+              <td>78-82</td>
+              <td>82-86</td>
+              <td>86-90</td>
+              <td>98-102</td>
+            </tr>
+          </table>
+        </div>
+
+        <p class="prodict-info-sizes__desc gray">ВСЕ РАЗМЕРЫ УКАЗАНЫ В СМ</p>
+
+        <div class="product-info-sizes__img-wrapper">
+          <img src="./img/rslider-sizes-bg.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+    <div class="right-slider__bottom">
+      <div class="btn-group">
+        <a href="#" class="btn btn--outline">КОНСУЛЬТАЦИЯ</a>
+        <a href="#" class="btn" data-rslider-close>ЗАКРЫТЬ</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="right-slider" id="catalog-filter">
+  <div class="right-slider__dialog">
+    <div class="right-slider__top">
+      <div class="right-slider__title">Фильтры</div>
+      <a href="#" class="right-slider__close close"></a>
+    </div>
+    <div class="right-slider__middle">
+      <div class="catalog-filter">
+        <div class="catalog-filter__block catalog-filter__block--open">
+          <a href="#" class="catalog-filter__title">ЦВЕТ</a>
+          <div class="catalog-filter__content">
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'ЧЁРНЫЙ'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'БЕЛЫЙ'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'КРАСНЫЙ'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'ЗЕЛЁНЫЙ'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'ЖЁЛТЫЙ'})
+          </div>
+        </div>
+
+        <div class="catalog-filter__block catalog-filter__block--open">
+          <a href="#" class="catalog-filter__title">РАЗМЕР</a>
+          <div class="catalog-filter__content">
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': '40'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': '42'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': '44'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': '46'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': '48'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': '50'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': '52'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': '54'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': '56'})
+          </div>
+        </div>
+
+        <div class="catalog-filter__block catalog-filter__block--open">
+          <a href="#" class="catalog-filter__title">СЕЗОН</a>
+          <div class="catalog-filter__content">
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'СЕЗОН'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'ДЕМИСЕЗОН'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'ЗИМА'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'ОСЕНЬ'})
+            @@include('../field-checkbox/field-checkbox-white.html', {'title': 'ВЕСНА'})
+          </div>
+        </div>
+
+        <div class="catalog-filter__block catalog-filter__block--open">
+          <a href="#" class="catalog-filter__title">ДИАПАЗОН ЦЕН</a>
+          <div class="catalog-filter__content">
+            @@include('../field-range-slider/field-range-slider.html')
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-slider__bottom">
+      <div class="btn-group">
+        <a href="#" class="btn btn--outline">Очистить</a>
+        <a href="#" class="btn" data-rslider-close>Сохранить</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="right-slider" id="order-item-more">
+  <div class="right-slider__dialog">
+    <div class="right-slider__top">
+      <div class="right-slider__title">ПОДРОБНЕЕ О ЗАКАЗЕ</div>
+      <a href="#" class="right-slider__close close"></a>
+    </div>
+    <div class="right-slider__middle">
+      TODO:
+    </div>
+    <div class="right-slider__bottom">
+      <div class="btn-group">
+        <!-- <a href="#" class="btn btn--outline">Очистить</a>
+        <a href="#" class="btn" data-rslider-close>Сохранить</a> -->
+      </div>
+    </div>
+  </div>
+</div>

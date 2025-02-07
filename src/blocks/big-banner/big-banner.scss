@@ -1,0 +1,102 @@
+// В этом файле должны быть стили для БЭМ-блока big-banner, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.big-banner {
+
+  $block-name:                &; // #{$block-name}__element
+
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  &--small {
+    height: 600px;
+
+    #{$block-name}__desktop-img {
+      // background-size: 100%;
+      // background-position: center;
+    }
+  }
+
+  &__player {
+    content: '';
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_828_1231)'%3E%3Crect width='24' height='24' rx='12' fill='%23F2F2F2' fill-opacity='0.75'/%3E%3Cpath d='M16 12L9 16L9 8L16 12Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_828_1231'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    z-index: 20;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__desktop-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-attachment: fixed;
+
+    @media screen and (max-width: $screen-sm - 1) {
+      background-attachment: scroll;
+    }
+
+
+  }
+
+  &__mobile-img {
+
+  }
+
+  &__desc-wrapper {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 84px;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__discount {
+    color: #BFBFBF;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &__more-btn {
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 6px;
+      bottom: -30px;
+      left: calc(50% - 6px);
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.999592 0.5L5.9998 5.5002L11 0.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      opacity: 0.7;
+
+      &:after {
+        bottom: -45px;
+      }
+    }
+  }
+}

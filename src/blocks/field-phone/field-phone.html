@@ -1,0 +1,22 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/field-phone/field-phone.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="field-phone">content</div>
+
+-->
+
+<label class="field-phone @@if (isError === true) { field-phone--error }">
+  @@if (title.length > 0) {
+  <span class="field-phone__title">@@title</span>
+  }
+  <input type="tel" placeholder="@@placeholder" class="field-phone__input">
+  <!-- <span class="field-phone__description">Тут может быть написана ошибка</span> -->
+</label>

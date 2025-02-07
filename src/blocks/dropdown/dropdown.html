@@ -1,0 +1,27 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/dropdown/dropdown.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="dropdown">content</div>
+
+-->
+
+<div class="dropdown">
+  @@if (title.length > 0) {
+  <div class="dropdown__title">@@title</div>
+  }
+  <div class="dropdown__items">
+    <div class="dropdown__item dropdown__item--selected">Не выбрано 1</div>
+    <div class="dropdown__item">Не выбрано 2</div>
+    <div class="dropdown__item">Не выбрано 3</div>
+    <div class="dropdown__item">Не выбрано 4</div>
+    <div class="dropdown__item">Не выбрано 5</div>
+  </div>
+</div>

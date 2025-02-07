@@ -1,0 +1,46 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/checkout-summary/checkout-summary.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="checkout-summary">content</div>
+
+-->
+<div class="checkout-summary">
+  <ul class="checkout-summary__list">
+    <li class="checkout-summary__list-item">
+      <span>СТОИМОСТЬ товаров</span>
+      <span>176 299 ₽</span>
+    </li>
+    <li class="checkout-summary__list-item">
+      <span>СКИДКА BOMFURS</span>
+      <span>-52 300 ₽</span>
+    </li>
+    <li class="checkout-summary__list-item">
+      <span>ПРОМОКОД</span>
+      <span>-5 000 ₽</span>
+    </li>
+    <li class="checkout-summary__list-item checkout-summary__list-item--result">
+      <span>ИТОГО</span>
+      <span>118 999 ₽</span>
+    </li>
+  </ul>
+  <div class="checkout-summary__action">
+    <a href="/checkout-2.html" class="btn btn--dblock">ПЕРЕЙТИ К ОФОРМЛЕНИЮ ЗАКАЗА</a>
+  </div>
+  <div class="checkout-summary__help">
+    <a href="#" class="checkout-summary__help-link">ДОСТАВКА И ВОЗВРАТ</a><br>
+    <a href="#" class="checkout-summary__help-link">ИНФОРМАЦИЯ ОБ оплате</a><br>
+    <a href="#" class="checkout-summary__help-link">ВОЙТИ В ЛИЧНЫЙ КАБИЕНТ</a>
+    <div class="checkout-summary__help-bottom">
+      <a href="#">НУЖНА ПОМОЩЬ?</a>
+      <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+    </div>
+  </div>
+</div>

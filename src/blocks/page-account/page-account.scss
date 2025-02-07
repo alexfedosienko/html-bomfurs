@@ -1,0 +1,68 @@
+// В этом файле должны быть стили для БЭМ-блока page-account, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.page-account {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 140px;
+
+  &__horizont-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .horizont-menu__link {
+      margin: 0px 10px;
+
+      @media screen and (max-width: $screen-md - 1) {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+
+    @media screen and (max-width: $screen-md - 1) {
+      margin-top: 0;
+    }
+
+    form {
+
+      .btn {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__basket {
+
+    &-title {
+      text-transform: uppercase;
+      font-weight: 500;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    &-action {
+      padding: 20px 0;
+    }
+
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+
+    @media screen and (max-width: $screen-md - 1) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+}

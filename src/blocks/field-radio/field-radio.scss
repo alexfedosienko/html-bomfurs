@@ -1,0 +1,58 @@
+// В этом файле должны быть стили для БЭМ-блока field-radio, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.field-radio {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 8px;
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked {
+
+      & + #{$block-name}__title {
+
+        &:before {
+          // background-color: #000;
+        }
+
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #000;
+          position: absolute;
+          left: 2px;
+          top: 8px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding-left: 18px;
+    line-height: 24px;
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid #000;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 6px);
+    }
+  }
+}

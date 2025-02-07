@@ -1,0 +1,41 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/order-item/order-item.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="order-item">content</div>
+
+-->
+
+<div class="order-item">
+  <div class="order-item__head">
+    <div class="order-item__info-block">
+      <span>заказ от</span>
+      <span>@@date</span>
+    </div>
+    <span class="order-item__status">@@status</span>
+  </div>
+  <div class="order-item__products">
+    @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+    @@include('../product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+  </div>
+  <div class="order-item__bottom">
+    <div class="order-item__info-block">
+      <span>доставлен</span>
+      <span>@@date</span>
+    </div>
+    <div class="order-item__summary">
+      <span>итого</span>
+      <span>118 999 ₽</span>
+    </div>
+  </div>
+  <div class="order-item__action">
+    <a href="#" class="btn btn--dblock" data-rslider="order-item-more">ПОДРОБНЕЕ О ЗАКАЗЕ</a>
+  </div>
+</div>

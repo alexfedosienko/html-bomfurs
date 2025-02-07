@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="page-product">
+      <div class="page-product__row">
+        <div class="page-product__col">
+          <img src="./img/product-card-1.jpg" alt="" class="page-product__img">
+          <img src="./img/product-card-2.jpg" alt="" class="page-product__img">
+          <img src="./img/product-card-3.jpg" alt="" class="page-product__img">
+          <img src="./img/product-card-4.jpg" alt="" class="page-product__img">
+          <img src="./img/product-card-5.jpg" alt="" class="page-product__img">
+        </div>
+        <div class="page-product__col">
+          <div>
+          <div class="page-product__info-wrapper">
+            <div class="page-product__info-row">
+              <div class="page-product__info-col">
+                <span class="page-product__label label">New</span>
+              </div>
+              <div class="page-product__info-col">
+                <a href="#" class="page-product__favorite-btn">
+                  <span class="icon icon--favorite"></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="page-product__info-row">
+              <div class="page-product__info-col">
+                <h1 class="page-product__title">ДВУХСТОРОННЯЯ ДУБЛЁНКА С КАПЮШОНОМ</h1>
+              </div>
+              <div class="page-product__info-col">
+                <div class="price">
+                  <div class="price__value">12 123 ₽</div>
+                  <div class="price__value price__value--old">50 999 ₽</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="page-product__description">Представляем эксклюзивную двустороннюю дублёнку 2 в 1 от Bomfurs: с одной стороны — элегантная экозамша с водоотталкивающей пропиткой, с другой — роскошный экомех, имитирующий норку. Прямой крой длиной 110 см обеспечивает комфорт и свободу движений, подчёркивая утончённый вкус обладательницы.</p>
+
+            <div class="page-product__line">
+              <a href="#" class="page-product__arrow-btn" data-rslider="product-more">Подробней о товаре</a>
+            </div>
+
+            <div class="page-product__block">
+              <div class="page-product__block-head">
+                <div class="page-product__block-title">цвет: <span>ЧЁРНЫЙ</span></div>
+                <a href="#" class="page-product__block-head-btn">сравнить ЦВЕТА</a>
+              </div>
+              <div class="page-product__block-content">
+                <div class="product-color-picker">
+                  <label class="product-color-picker__label">
+                    <input type="radio" name="product-color-picker" class="product-color-picker__input" checked>
+                    <img src="./img/color-picker-1.png" alt="" class="product-color-picker__img">
+                  </label>
+                  <label class="product-color-picker__label">
+                    <input type="radio" name="product-color-picker" class="product-color-picker__input">
+                    <img src="./img/color-picker-2.png" alt="" class="product-color-picker__img">
+                  </label>
+                  <label class="product-color-picker__label">
+                    <input type="radio" name="product-color-picker" class="product-color-picker__input">
+                    <img src="./img/color-picker-3.png" alt="" class="product-color-picker__img">
+                  </label>
+                  <label class="product-color-picker__label">
+                    <input type="radio" name="product-color-picker" class="product-color-picker__input" disabled>
+                    <img src="./img/color-picker-4.png" alt="" class="product-color-picker__img">
+                  </label>
+                  <label class="product-color-picker__label">
+                    <input type="radio" name="product-color-picker" class="product-color-picker__input" disabled>
+                    <img src="./img/color-picker-5.png" alt="" class="product-color-picker__img">
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-product__block">
+              <div class="page-product__block-head">
+                <div class="page-product__block-title">РАЗМЕР</div>
+                <a href="#" class="page-product__block-head-btn" data-rslider="product-info-sizes">ТАБЛИЦА РАЗМЕРОВ</a>
+              </div>
+              <div class="page-product__block-content">
+                <div class="product-size-picker">
+                  <button class="product-size-picker__link active">42</button>
+                  <button class="product-size-picker__link">44</button>
+                  <button class="product-size-picker__link">46</button>
+                  <button class="product-size-picker__link" disabled>48</button>
+                  <button class="product-size-picker__link" disabled>50</button>
+                  <button class="product-size-picker__link" disabled>52</button>
+                  <button class="product-size-picker__link">54</button>
+                  <button class="product-size-picker__link">56</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-product__basket-btn btn btn--dblock">Добавить в корзину</div>
+
+            <div class="page-product__line">
+              <a href="#" class="page-product__arrow-btn">ДОСТАВКА И ВОЗВРАТ</a>
+            </div>
+            <div class="page-product__line">
+              <a href="#" class="page-product__arrow-btn">УХОД ЗА ТОВАРОМ</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sm-title">ВОЗМОЖНО ВАМ ПОНРАВИТСЯ</p>
+      <div class="catalog">
+        <div class="catalog-slider">
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        </div>
+      </div>
+
+      <p class="sm-title">НЕДАВНО ПРОСМОТРЕННЫЕ</p>
+      <div class="catalog">
+        <div class="catalog-slider">
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+          @@include('../blocks/product-item/product-item.html', {'name': 'NAME', 'price': '50 999 ₽', 'discount': 0, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+        </div>
+      </div>
+
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока catalog-grid, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.catalog-grid {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: grid;
+  grid-row-gap: 40px;
+  grid-column-gap: 4px;
+
+  &.g-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: $screen-md - 1) {
+      grid-row-gap: 20px;
+    }
+
+    @media screen and (max-width: $screen-sm - 1) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &.g-4 {
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: $screen-lg - 1) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: $screen-md - 1) {
+      grid-row-gap: 20px;
+    }
+
+    @media screen and (max-width: $screen-sm - 1) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

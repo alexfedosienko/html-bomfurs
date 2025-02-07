@@ -1,0 +1,26 @@
+// В этом файле должны быть стили для БЭМ-блока code-input, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.code-input {
+
+  $block-name:                &; // #{$block-name}__element
+  display: flex;
+  justify-content: space-between;
+
+  &__input {
+    border: 1px solid #000;
+    border-radius: 0;
+    font-size: 24px;
+    line-height: 130%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-weight: 600;
+
+    @media screen and (max-width: $screen-md - 1) {
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+}

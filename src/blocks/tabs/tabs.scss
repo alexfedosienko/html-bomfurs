@@ -1,0 +1,77 @@
+// В этом файле должны быть стили для БЭМ-блока tabs, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.tabs {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+  }
+
+  &__pages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    @media screen and (max-width: $screen-lg - 1) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding: 0;
+    margin: 0;
+    margin-right: 28px;
+
+    @media screen and (max-width: $screen-lg - 1) {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+
+    &--active {
+
+      #{$block-name}__link {
+        color: #022435;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 42px;
+    line-height: 130%;
+    color: rgba(2, 36, 53, 0.1);
+    font-weight: 700;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #022435;
+    }
+
+    @media screen and (max-width: $screen-lg - 1) {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width: $screen-sm - 1) {
+      font-size: 26px;
+    }
+  }
+
+  &__page {
+    height: 0;
+    opacity: 0;
+    z-index: -100;
+    overflow: hidden;
+
+    &--active {
+      height: auto;
+      opacity: 1;
+      overflow: auto;
+      z-index: 1;
+    }
+  }
+}

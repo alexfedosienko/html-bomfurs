@@ -1,0 +1,227 @@
+// В этом файле должны быть стили для БЭМ-блока page-product, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.page-product {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: 40px;
+
+  &__row {
+    display: flex;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: $screen-md - 1) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    flex: 1;
+    width: 100%;
+
+    &:nth-child(2) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+
+    @media screen and (max-width: $screen-md - 1) {
+
+      &:nth-child(n+2) {
+        display: none;
+      }
+    }
+  }
+
+  &__info-wrapper {
+    width: 700px;
+    max-width: 700px;
+    margin-top: 100px;
+    position: sticky;
+    top: 100px;
+
+    @media screen and (max-width: 1440px) {
+      padding: 20px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: $screen-md - 1) {
+      margin-top: 0;
+      padding: 20px;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .catalog {
+    margin-bottom: 40px;
+  }
+
+  .sm-title {
+    padding-left: 40px;
+    text-align: left;
+
+    @media screen and (max-width: $screen-md - 1) {
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+
+  &__info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__favorite-btn {
+    display: inline-block;
+    padding: 4px 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+    max-width: 70%;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 20px 0;
+
+    @media screen and (max-width: $screen-md - 1) {
+      font-size: 14px;
+      max-width: 100%;
+    }
+  }
+
+  .price {
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media screen and (max-width: $screen-md - 1) {
+      align-items: flex-end;
+    }
+  }
+
+  .price .price__value {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .price .price__value--old {
+    font-size: 10px;
+    margin-left: 0;
+  }
+
+  &__description {
+    font-size: 15px;
+    line-height: 130%;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  &__line {
+    padding: 5px 0;
+  }
+
+  &__arrow-btn {
+    @include right-arrow();
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+  }
+
+  &__block {
+    padding: 20px 0;
+
+    &-head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    &-title {
+      text-transform: uppercase;
+    }
+
+    &-head-btn {
+      @include right-arrow();
+      text-transform: uppercase;
+    }
+  }
+
+  &__basket-btn {
+    margin: 20px 0;
+  }
+}
+
+.product-size-picker {
+  $block-name: &; // #{$block-name}__element
+
+  &__link {
+    padding: 8px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+
+      &:not(:disabled) {
+        opacity: 0.7;
+      }
+    }
+
+    &.active {
+      border-bottom: 1px solid #000;
+    }
+
+    &:disabled {
+      color: #808080;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.product-color-picker {
+  $block-name:                &; // #{$block-name}__element
+  display: flex;
+
+  &__label {
+    margin-right: 4px;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked {
+
+      & + #{$block-name}__img {
+        border-color: #000;
+      }
+    }
+
+    &:disabled {
+
+      & + #{$block-name}__img {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 60px;
+    border-bottom: 1px solid transparent;
+  }
+}

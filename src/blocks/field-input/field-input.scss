@@ -1,0 +1,31 @@
+// В этом файле должны быть стили для БЭМ-блока field-input, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.field-input {
+
+  $block-name:                &; // #{$block-name}__element
+  @include input();
+
+
+  &--with-button {
+    position: relative;
+
+    #{$block-name}__input {
+      padding-right: 100px;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 13px;
+    text-decoration: underline;
+    position: absolute;
+    right: 0;
+    bottom: 14px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

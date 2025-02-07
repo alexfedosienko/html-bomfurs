@@ -1,0 +1,48 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/product-item/product-item.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="product-item">content</div>
+
+-->
+
+<div class="product-item">
+  @@if (discount > 0) {
+    <span class="product-item__discount">20%</span>
+  }
+
+  <a href="/account-whishlist.html" class="product-item__favorite-btn">
+    <span class="icon icon--favorite"></span>
+    <!-- active -->
+  </a>
+
+  <a href="product.html" class="product-item__pics">
+    <img src="./img/product-item/product-item-1.jpg" alt="" class="product-item__pic">
+    <img src="./img/product-item/product-item-2.jpg" alt="" class="product-item__pic--second">
+  </a>
+
+  <div class="product-item__bottom">
+    <a href="product.html" class="product-item__name">@@name</a>
+    <div class="product-item__price">
+      @@if(discount > 0) {
+        <div class="price">
+          <div class="price__value">@@price</div>
+          <div class="price__value price__value--old">50 999 ₽</div>
+        </div>
+      }
+      @@if(discount == 0) {
+        <div class="price">
+          <div class="price__value">@@price</div>
+        </div>
+      }
+    </div>
+    <div class="product-item__label label">@@label</div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../include/head.html')
+<body>
+  <div class="page">
+    @@include('../blocks/page-header/page-header.html')
+
+    <section class="page-auth">
+      <div class="center-wrapper">
+        <div class="w630">
+          <p class="sm-title">ВВЕДИТЕ КОД ВЕРИФИКАЦИИ</p>
+          <p class="page-auth__text">МЫ ВЫСЛАЛИ КОД ДЛЯ ВЕРЕФИКАЦИИ ВАШЕГО ПРОФИЛЯ НА НОМЕР ТЕЛЕФОНА</p>
+          @@include('../blocks/code-input/code-input.html')
+          <a href="/account-auth-2.html" class="btn btn--dblock">Продолжить</a>
+        </div>
+      </div>
+    </section>
+
+    @@include('../blocks/page-footer/page-footer.html')
+  </div>
+  @@include('../include/bottom.html')
+</body>
+</html>

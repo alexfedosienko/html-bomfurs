@@ -1,0 +1,24 @@
+// В этом файле должны быть стили для БЭМ-блока price, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.price {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  align-items: flex-end;
+
+  &__value {
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+
+    &--old {
+      font-weight: 300;
+      text-decoration: line-through;
+      color: #BFBFBF;
+      font-size: 10px;
+      margin-left: 8px;
+    }
+  }
+}

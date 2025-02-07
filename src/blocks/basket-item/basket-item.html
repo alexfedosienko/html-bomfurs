@@ -1,0 +1,45 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/basket-item/basket-item.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="basket-item">content</div>
+
+-->
+
+<div class="basket-item">
+  <div class="basket-item__img-wrapper">
+    <img src="./img/basket-item.jpg" alt="" class="basket-item__img">
+  </div>
+  <div class="basket-item__content">
+    <div class="basket-item__head">
+      <a href="#" class="basket-item__name">КОЖАННЫЙ ПЛАЩ</a>
+      @@if(discount > 0) {
+      <div class="price">
+        <div class="price__value price__value--old">50 999 ₽</div>
+        <div class="price__value">@@price</div>
+      </div>
+      }
+      @@if(discount == 0) {
+      <div class="price">
+        <div class="price__value">@@price</div>
+      </div>
+      }
+    </div>
+    <ul class="basket-item__prop">
+      <li class="basket-item__prop-item"><span>ЦВЕТ:</span><span>СЕРЫЙ</span></li>
+      <li class="basket-item__prop-item"><span>РАЗМЕР:</span><span>44</span></li>
+      <li class="basket-item__prop-item"><span>КОЛИЧЕСТВО:</span><span>2</span></li>
+    </ul>
+    <div class="basket-item__actions">
+      <a href="#" class="basket-item__link">РЕДАКТИРОВАТЬ</a>
+      <a href="#" class="basket-item__link">удалить</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+// В этом файле должны быть стили для БЭМ-блока order-item, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.order-item {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 40px;
+
+  &__head,
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+
+  &__info-block,
+  &__summary {
+
+    span {
+      display: block;
+      text-transform: uppercase;
+
+      &:nth-child(1) {
+        font-weight: 500;
+        margin-bottom: 4px;
+        font-style: 13px;
+        line-height: 130%;
+      }
+    }
+  }
+
+  &__summary {
+    text-align: right;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__status {
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+  }
+
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 8px;
+
+    .product-item {
+
+    }
+    // display: none;
+  }
+
+  &__action {
+    padding: 20px 0;
+  }
+}
+
+
+// <div class="order-item">
+//   <div class="order-item__head">
+//     <span class="order-item__status">@@status</span>
+//   </div>
+//   <div class="order-item__products">
+//     @@include('../product-item/product-item.html', {'name': 'NAME', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+//     @@include('../product-item/product-item.html', {'name': 'ДУБЛЕНКА ДВУХСТОРОНЯЯ', 'price': '23 999 ₽', 'discount': 20, 'label': 'new', 'picture': './img/product-picture-1.jpg'})
+//   </div>
+//   <div class="order-item__bottom">
+//     <div class="order-item__summary">
+//       <span>итого</span>
+//       <span>118 999 ₽</span>
+//     </div>
+//   </div>
+// </div>
