@@ -25,6 +25,10 @@
     padding: 0 20px;
   }
 
+  @media screen and (max-width: $screen-sm - 1) {
+    padding: 0 10px;
+  }
+
   & + .page-header {
     top: 40px;
   }
@@ -36,6 +40,10 @@
   &__counter {
     position: absolute;
     line-height: 40px;
+
+    @media screen and (max-width: $screen-sm - 1) {
+      display: none;
+    }
 
     span {
       color: #fff;
