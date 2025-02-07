@@ -5,14 +5,55 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  &__open {
+  &__item {
+    border-top: 1px solid #F2F2F2;
+    padding: 20px 0;
+    cursor: pointer;
 
-    #{$block-name}__body {
-      display: block;
+    &--open {
+
+      #{$block-name}__title {
+
+        &:after {
+          transform: rotateZ(0);
+        }
+      }
+
+      #{$block-name}__body {
+        display: block;
+      }
+    }
+
+    &:hover {
+
+      #{$block-name}__title {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    display: block;
+    transition: all 0.2s ease;
+
+    &:after {
+      content: '';
+      right: 0;
+      top: calc(50% - 3px);
+      position: absolute;
+      width: 12px;
+      height: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.999591 5.5002L5.9998 0.5L11 5.5002' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      transform: rotateZ(180deg);
     }
   }
 
   &__body {
     display: none;
+    padding-right: 20px;
   }
 }

@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока text-social, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.text-social {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+
+
+  &__link {
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+}

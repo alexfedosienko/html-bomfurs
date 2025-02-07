@@ -207,4 +207,10 @@ $(document).ready(function() {
     });
     $wrap.find('input[type="hidden"]').val(fullval);
   });
+
+  $('body').on('click', '.accordion__item', function(e) {
+    e.preventDefault();
+    $('.accordion__item').removeClass('accordion__item--open');
+    $(this).addClass('accordion__item--open');
+  });
 });

@@ -5,82 +5,34 @@
   <div class="page">
     @@include('../blocks/page-header/page-header.html')
 
-    <section class="faq">
+    <section class="page-faq">
+      <div class="page-faq__left">
+        <ul class="page-faq__menu">
+          <li class="page-faq__item"><a href="#" class="page-faq__link active">ДОСТАВКА И заказы</a></li>
+          <li class="page-faq__item"><a href="#" class="page-faq__link">ВОЗВРАТ И ОБМЕН</a></li>
+          <li class="page-faq__item"><a href="#" class="page-faq__link">ПРОМОКОДЫ И СКИДКИ</a></li>
+          <li class="page-faq__item"><a href="#" class="page-faq__link">ОПЛАТА</a></li>
+          <li class="page-faq__item"><a href="#" class="page-faq__link">КОНТАКТЫ</a></li>
+          <li class="page-faq__item"><a href="#" class="page-faq__link">ДОКУМЕНТЫ</a></li>
+        </ul>
+      </div>
+      <div class="page-faq__middle">
+        @@include('../blocks/accordion/accordion.html')
+      </div>
+      <div class="page-faq__right">
+        <p>НАША КОМАНДА готова ОТВЕТИТЬ НА ВАШИ ВОПРОСЫ С ПОНЕДЕЛЬНИКА ПО СУББОТУ С 10:00 ДО 19:00 (ПО МОСКОВСКОМУ ВРЕМЕНИ).</p>
 
-.left-menu
-ДОСТАВКА И ЗАКАЗЫ
-ВОЗВРАТ И ОБМЕН
-ПРОМОКОДЫ И СКИДКИ
-ОПЛАТА
-КОНТАКТЫ
-ДОКУМЕНТЫ
+        <div class="page-faq__action">
+          <a href="#" class="btn btn--dblock" data-rslider="contacts-slider">ОТПРАВИТЬ СООБЩЕНИЕ</a>
+        </div>
 
-.center
-<div class="accordion">
-  <div class="accordion__item accordion__item--open">
-    <a href="#" class="accordion__title">КАК МНЕ ОТСЛЕДИТЬ СВОЙ ЗАКАЗ?</a>
-    <div class="accordion__body">
-      <p>BOMFURS СООБЩИТ ВАМ ПО ЭЛЕКТРОННОЙ ПОЧТЕ О ХОДЕ ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА. ВЫ ТАКЖЕ МОЖЕТЕ ОТСЛЕЖИВАТЬ ХОД ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА В РАЗДЕЛЕ МОЙ ЗАКАЗ ВАШЕГО ОНЛАЙН-АККАУНТА КЛИЕНТА НА САЙТЕ GIVENCHY.COM ИЛИ СВЯЗАВШИСЬ С НАШЕЙ СЛУЖБОЙ ПОДДЕРЖКИ КЛИЕНТОВ.</p>
-    </div>
-  </div>
+        <div class="page-faq__help">
+          <a href="#">НУЖНА ПОМОЩЬ?</a>
+          <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+        </div>
 
-  <div class="accordion__item accordion__item--open">
-    <a href="#" class="accordion__title">СПОСОБЫ И СТОИМОСТЬ ДОСТАВКИ</a>
-    <div class="accordion__body">
-      <p>BOMFURS СООБЩИТ ВАМ ПО ЭЛЕКТРОННОЙ ПОЧТЕ О ХОДЕ ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА. ВЫ ТАКЖЕ МОЖЕТЕ ОТСЛЕЖИВАТЬ ХОД ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА В РАЗДЕЛЕ МОЙ ЗАКАЗ ВАШЕГО ОНЛАЙН-АККАУНТА КЛИЕНТА НА САЙТЕ GIVENCHY.COM ИЛИ СВЯЗАВШИСЬ С НАШЕЙ СЛУЖБОЙ ПОДДЕРЖКИ КЛИЕНТОВ.</p>
-    </div>
-  </div>
-
-  <div class="accordion__item accordion__item--open">
-    <a href="#" class="accordion__title">СТАТУСЫ ЗАКАЗА</a>
-    <div class="accordion__body">
-      <p>BOMFURS СООБЩИТ ВАМ ПО ЭЛЕКТРОННОЙ ПОЧТЕ О ХОДЕ ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА. ВЫ ТАКЖЕ МОЖЕТЕ ОТСЛЕЖИВАТЬ ХОД ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА В РАЗДЕЛЕ МОЙ ЗАКАЗ ВАШЕГО ОНЛАЙН-АККАУНТА КЛИЕНТА НА САЙТЕ GIVENCHY.COM ИЛИ СВЯЗАВШИСЬ С НАШЕЙ СЛУЖБОЙ ПОДДЕРЖКИ КЛИЕНТОВ.</p>
-    </div>
-  </div>
-
-  <div class="accordion__item accordion__item--open">
-    <a href="#" class="accordion__title">ТРАНСПОРТНЫЕ КОМПАНИИ</a>
-    <div class="accordion__body">
-      <p>BOMFURS СООБЩИТ ВАМ ПО ЭЛЕКТРОННОЙ ПОЧТЕ О ХОДЕ ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА. ВЫ ТАКЖЕ МОЖЕТЕ ОТСЛЕЖИВАТЬ ХОД ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА В РАЗДЕЛЕ МОЙ ЗАКАЗ ВАШЕГО ОНЛАЙН-АККАУНТА КЛИЕНТА НА САЙТЕ GIVENCHY.COM ИЛИ СВЯЗАВШИСЬ С НАШЕЙ СЛУЖБОЙ ПОДДЕРЖКИ КЛИЕНТОВ.</p>
-    </div>
-  </div>
-
-  <div class="accordion__item accordion__item--open">
-    <a href="#" class="accordion__title">ОГРАНИЧЕНИЯ ПО ДОСТАВКЕ</a>
-    <div class="accordion__body">
-      <p>BOMFURS СООБЩИТ ВАМ ПО ЭЛЕКТРОННОЙ ПОЧТЕ О ХОДЕ ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА. ВЫ ТАКЖЕ МОЖЕТЕ ОТСЛЕЖИВАТЬ ХОД ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА В РАЗДЕЛЕ МОЙ ЗАКАЗ ВАШЕГО ОНЛАЙН-АККАУНТА КЛИЕНТА НА САЙТЕ GIVENCHY.COM ИЛИ СВЯЗАВШИСЬ С НАШЕЙ СЛУЖБОЙ ПОДДЕРЖКИ КЛИЕНТОВ.</p>
-    </div>
-  </div>
-
-  <div class="accordion__item accordion__item--open">
-    <a href="#" class="accordion__title">ПОДГОТОВКА ЗАКАЗА</a>
-    <div class="accordion__body">
-      <p>BOMFURS СООБЩИТ ВАМ ПО ЭЛЕКТРОННОЙ ПОЧТЕ О ХОДЕ ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА. ВЫ ТАКЖЕ МОЖЕТЕ ОТСЛЕЖИВАТЬ ХОД ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА В РАЗДЕЛЕ МОЙ ЗАКАЗ ВАШЕГО ОНЛАЙН-АККАУНТА КЛИЕНТА НА САЙТЕ GIVENCHY.COM ИЛИ СВЯЗАВШИСЬ С НАШЕЙ СЛУЖБОЙ ПОДДЕРЖКИ КЛИЕНТОВ.</p>
-    </div>
-  </div>
-
-  <div class="accordion__item accordion__item--open">
-    <a href="#" class="accordion__title">КАК БУДЕТ УПАКОВАН ЗАКАЗ</a>
-    <div class="accordion__body">
-      <p>BOMFURS СООБЩИТ ВАМ ПО ЭЛЕКТРОННОЙ ПОЧТЕ О ХОДЕ ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА. ВЫ ТАКЖЕ МОЖЕТЕ ОТСЛЕЖИВАТЬ ХОД ВЫПОЛНЕНИЯ ВАШЕГО ЗАКАЗА В РАЗДЕЛЕ МОЙ ЗАКАЗ ВАШЕГО ОНЛАЙН-АККАУНТА КЛИЕНТА НА САЙТЕ GIVENCHY.COM ИЛИ СВЯЗАВШИСЬ С НАШЕЙ СЛУЖБОЙ ПОДДЕРЖКИ КЛИЕНТОВ.</p>
-    </div>
-  </div>
-
-  <div class="accordion__item accordion__item--open">
-    <a href="#" class="accordion__title">УХОД ЗА ТОВАРОМ</a>
-    <div class="accordion__body">
-      <p>СВОЙСТВА НЕКОТОРЫХ МАТЕРИАЛОВ И/ИЛИ ОПРЕДЕЛЕННЫЕ ОТДЕЛКИ ИЗДЕЛИЙ (СКЛАДКИ, БЛЕСК И Т. Д.) НЕ ПРЕДНАЗНАЧЕНЫ ДЛЯ ПОСТОЯННОГО ИСПОЛЬЗОВАНИЯ. МНОГОКРАТНЫЕ СТИРКИ СО ВРЕМЕНЕМ ИЗМЕНЯТ ВНЕШНИЙ ВИД ОДЕЖДЫ. ЭТО СОВЕРШЕННО НОРМАЛЬНО И ПРИДАЕТ ПРЕДМЕТУ ОДЕЖДЫ ПРИВЛЕКАТЕЛЬНОСТЬ И ОСОБЫЙ ХАРАКТЕР.</p>
-      <p>ПОДРОБНЕЕ ОБ УХОДЕ ЗА ТОВАРОМ</p>
-    </div>
-  </div>
-</div>
-
-.right-menu
-<p>НАША КОМАНДА ГОТОВА ОТВЕТИТЬ НА ВАШИ ВОПРОСЫ С ПОНЕДЕЛЬНИКА ПО СУББОТУ С 10:00 ДО 19:00 (ПО МОСКОВСКОМУ ВРЕМЕНИ).</p>
-<a href="#" class="btn btn--dblock">ОТПРАВИТЬ СООБЩЕНИЕ</a>
-НУЖНА ПОМОЩЬ?                           +7 (999) 999-99-99
-INSTAGRAM        PINTEREST        TELEGRAM        VKONTAKTE
-
+        @@include('../blocks/text-social/text-social.html')
+      </div>
     </section>
 
     @@include('../blocks/page-footer/page-footer.html')
