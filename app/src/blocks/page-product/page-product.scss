@@ -27,6 +27,7 @@
   }
 
   &__img {
+    cursor: pointer;
 
     @media screen and (max-width: $screen-md - 1) {
 

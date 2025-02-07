@@ -1,0 +1,48 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/picture-viewer/picture-viewer.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="picture-viewer">content</div>
+
+-->
+
+<div class="picture-viewer">
+  <a href="#" class="picture-viewer__close close"></a>
+  <div class="picture-viewer__wrapper" style="background-image: url('/img/product-viewer-picture-1.jpg');"></div>
+  <ul class="picture-viewer__slides">
+    <li class="picture-viewer__slide">
+      <a
+        href="#"
+        class="picture-viewer__slide-link active"
+        style="background-image: url('./img/product-viewer-slide-1.jpg');"
+        data-full-src="./img/product-viewer-picture-1.jpg"
+      >
+      </a>
+    </li>
+    <li class="picture-viewer__slide">
+      <a
+        href="#"
+        class="picture-viewer__slide-link"
+        style="background-image: url('./img/product-viewer-slide-2.jpg');"
+        data-full-src="./img/product-viewer-picture-2.jpg"
+      >
+      </a>
+    </li>
+    <li class="picture-viewer__slide">
+      <a
+        href="#"
+        class="picture-viewer__slide-link"
+        style="background-image: url('./img/product-viewer-slide-3.png');"
+        data-full-src="./img/product-viewer-picture-3.jpg"
+      >
+      </a>
+    </li>
+  </ul>
+</div>

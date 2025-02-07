@@ -3,26 +3,6 @@ $(document).ready(function() {
   $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-99-99"});
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
-  // ТАБЫ
-
-    // $('body').on('click', '.tabs__link', function(e) {
-    //   e.preventDefault();
-    //   const href = $(this).attr('href');
-
-    //   if (href == "#") return;
-    //   if ($(href).length == 0) return;
-
-    //   $(this).closest('.tabs').find('.tabs__item').removeClass('tabs__item--active');
-    //   $(this).closest('.tabs__item').addClass('tabs__item--active');
-
-    //   $(this).closest('.tabs').find('.tabs__page').removeClass('tabs__page--active');
-    //   $(href).addClass('tabs__page--active');
-    // });
-
-  // END ТАБЫ
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-
-  ////////////////////////////////////////////////////////////////////////////////////////////////
   // Модалки
 
     // // Открыть
@@ -44,7 +24,6 @@ $(document).ready(function() {
 
   // END Модалки
   ////////////////////////////////////////////////////////////////////////////////////////////////
-
 
   $('.top-sale-slider').slick({
     dots: false,
@@ -212,5 +191,24 @@ $(document).ready(function() {
     e.preventDefault();
     $('.accordion__item').removeClass('accordion__item--open');
     $(this).addClass('accordion__item--open');
+  });
+
+  $('body').on('click', '.page-product__img', function(e){
+    e.preventDefault();
+    $('.picture-viewer').addClass('picture-viewer--open');
+    $('body').addClass('stop-scroll');
+  });
+  $('body').on('click', '.picture-viewer__close', function(e) {
+    e.preventDefault();
+    $('.picture-viewer').removeClass('picture-viewer--open');
+    $('body').removeClass('stop-scroll');
+  });
+  $('body').on('click', '.picture-viewer__slide-link', function(e) {
+    e.preventDefault();
+    let src = $(this).data('full-src');
+    if (!src.length) return;
+    $('.picture-viewer__slide-link').removeClass('active');
+    $(this).addClass('active');
+    $('.picture-viewer__wrapper').css("background-image", "url('" + src + "')");
   });
 });
