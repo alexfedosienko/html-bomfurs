@@ -55,6 +55,10 @@
       top: calc(50% - 7px);
       background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4001 5.70599C10.4001 8.41219 8.20632 10.606 5.50012 10.606C2.79393 10.606 0.600122 8.41219 0.600122 5.70599C0.600122 2.9998 2.79393 0.805994 5.50012 0.805994C8.20632 0.805994 10.4001 2.9998 10.4001 5.70599Z' stroke='black' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.0001 14.206L9.50006 9.70599' stroke='black' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
     }
+
+    #{$block-name}__input {
+      padding-right: 30px;
+    }
   }
 
   // &--error {
