@@ -1,5 +1,5 @@
 {
-  "name": "html-restorator-v2",
+  "name": "html-bomfurs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexfedosienko/html-restorator-v2.git"
+    "url": "git+https://github.com/alexfedosienko/html-bomfurs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alexfedosienko/html-restorator-v2/issues"
+    "url": "https://github.com/alexfedosienko/html-bomfurs/issues"
   },
-  "homepage": "https://github.com/alexfedosienko/html-restorator-v2#readme",
+  "homepage": "https://github.com/alexfedosienko/html-bomfurs#readme",
   "dependencies": {
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
