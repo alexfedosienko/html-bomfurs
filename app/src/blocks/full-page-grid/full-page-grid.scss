@@ -6,10 +6,15 @@
   $block-name:                &; // #{$block-name}__element
   display: grid;
   height: calc(100vh + 57px);
-  padding-top: 57px;
+  padding-top: 97px;
 
   &.g2x2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: $screen-sm - 1) {
+    display: flex;
+    flex-direction: column;
   }
 }

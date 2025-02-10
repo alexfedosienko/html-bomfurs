@@ -23,4 +23,8 @@
     left: 20px;
     color: #fff;
   }
+
+  @media screen and (max-width: $screen-sm - 1) {
+    background-size: cover;
+  }
 }
