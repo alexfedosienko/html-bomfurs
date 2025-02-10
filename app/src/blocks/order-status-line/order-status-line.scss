@@ -1,0 +1,62 @@
+// В этом файле должны быть стили для БЭМ-блока order-status-line, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.order-status-line {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__progress {
+    border-bottom: 1px solid #E6E6E6;
+    position: relative;
+    margin-bottom: 20px;
+
+    &-wrap {
+      position: absolute;
+      top: -8px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &-round {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #E6E6E6;
+
+      &.active {
+        border: 4px solid #000;
+        background: #fff;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &-block {
+
+      span {
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 2px;
+        color: #E6E6E6;
+
+        &:nth-child(1) {
+          font-weight: 500;
+        }
+      }
+
+      &.active {
+        span {
+          color: #000;
+        }
+      }
+
+      &.center { text-align: center; }
+      &.last { text-align: right; }
+    }
+  }
+}

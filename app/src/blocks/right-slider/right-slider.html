@@ -299,7 +299,7 @@
   </div>
 </div>
 
-<div class="right-slider" id="order-item-more">
+<div class="right-slider right-slider--open" id="order-item-more">
   <div class="right-slider__dialog">
     <div class="right-slider__top">
       <div class="right-slider__title">ПОДРОБНЕЕ О ЗАКАЗЕ</div>
@@ -310,10 +310,13 @@
 
       <div class="order-info">
 
-        <!-- TODO: order status -->
+        <div class="order-info__status">
+          <div class="sm-title">ПЕРЕДАН В РАСПРЕДЕЛИТЕЛЬНЫЙ центр</div>
+          @@include('../order-status-line/order-status-line.html')
+        </div>
 
-        <div class="sm-title">Товары (3)</div>
         <div class="order-info__basket-items">
+          <div class="sm-title">Товары (3)</div>
           @@include('../basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 0})
           @@include('../basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 10})
         </div>

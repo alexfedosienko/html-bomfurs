@@ -1,0 +1,36 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('./src/blocks/order-status-line/order-status-line.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="order-status-line">content</div>
+
+-->
+
+<div class="order-status-line">
+
+  <div class="order-status-line__progress">
+    <div class="order-status-line__progress-wrap">
+      <div class="order-status-line__progress-round active"></div>
+      <!--DEV <div class="order-status-line__progress-round"></div> -->
+      <div class="order-status-line__progress-round"></div>
+    </div>
+  </div>
+  <div class="order-status-line__info">
+    <div class="order-status-line__info-block active">
+      <span>создан</span><span>01.12.2024</span>
+    </div>
+    <!--DEV <div class="order-status-line__info-block center">
+      <span>создан</span><span>01.12.2024</span>
+    </div> -->
+    <div class="order-status-line__info-block last">
+      <span>ВРУЧЕН</span><span>01.12.2024</span>
+    </div>
+  </div>
+</div>
