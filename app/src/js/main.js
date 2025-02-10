@@ -83,6 +83,16 @@ $(document).ready(function() {
     $('.page-backdrop').removeClass('page-backdrop--open');
     $('body').removeClass('stop-scroll');
   });
+  $('body').on('click', '.page-backdrop--open', function(e) {
+    if ($('.right-slider--open').length > 0) {
+      $('.page-backdrop').removeClass('page-backdrop--open');
+      $('.right-slider--open').removeClass('right-slider--open');
+      $('body').removeClass('stop-scroll');
+    }
+  });
+
+
+
 
   $('body').on('click', '.field-select', function(e) {
     e.preventDefault();
