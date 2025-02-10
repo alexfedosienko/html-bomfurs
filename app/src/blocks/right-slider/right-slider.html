@@ -306,12 +306,47 @@
       <a href="#" class="right-slider__close close"></a>
     </div>
     <div class="right-slider__middle">
-      TODO:
+
+
+      <div class="order-info">
+
+        <!-- TODO: order status -->
+
+        <div class="sm-title">Товары (3)</div>
+        <div class="order-info__basket-items">
+          @@include('../basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 0})
+          @@include('../basket-item/basket-item.html', {'price': '45 000 ₽', 'discount': 10})
+        </div>
+
+        <div class="order-info__block">
+          <div class="sm-title">Детали оплаты</div>
+          @@include('../checkout-summary/order-summary-payment.html')
+        </div>
+
+        <div class="order-info__block">
+          <div class="sm-title">Детали доставки</div>
+          @@include('../checkout-summary/order-summary-delivery.html')
+        </div>
+
+        <div class="order-info__block">
+          <div class="sm-title">Нужна помощь?</div>
+          <ul class="order-info__help-menu">
+            <li class="order-info__help-menu-item"><a href="#" class="order-info__help-menu-link">ЭЛЕКТРОННАЯ выписка</a></li>
+            <li class="order-info__help-menu-item"><a href="#" class="order-info__help-menu-link">ПОЛИТИКА ВОЗВРАТОВ</a></li>
+            <li class="order-info__help-menu-item"><a href="#" class="order-info__help-menu-link">УСЛОВИЯ ДОСТАВКИ</a></li>
+            <li class="order-info__help-menu-item"><a href="#" class="order-info__help-menu-link">УХОД ЗА ТОВАРОМ</a></li>
+          </ul>
+          <div class="order-info__help-line">
+            <a href="#">ОСТАЛИСЬ вопросы?</a>
+            <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="right-slider__bottom">
       <div class="btn-group">
-        <!-- <a href="#" class="btn btn--outline">Очистить</a>
-        <a href="#" class="btn" data-rslider-close>Сохранить</a> -->
+        <a href="#" class="btn btn--outline">Отменить заказ</a>
+        <a href="#" class="btn" data-rslider-close>Отследить</a>
       </div>
     </div>
   </div>

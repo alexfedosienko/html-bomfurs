@@ -1,0 +1,76 @@
+// В этом файле должны быть стили для БЭМ-блока order-info, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.order-info {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__block {
+    border-top: 1px solid #F2F2F2;
+    padding-top: 20px;
+  }
+
+  &__summary {
+
+    .checkout-summary__list-item span {
+
+      &:nth-child(1) {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__help {
+
+    &-menu {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+
+      @media screen and (max-width: $screen-md - 1) {
+        flex-wrap: wrap;
+      }
+
+      // @media screen and (max-width: $screen-sm - 1) {
+      //   flex-direction: column;
+      // }
+
+      &-link {
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid #000;
+        padding-bottom: 2px;
+        display: block;
+        margin-right: 12px;
+
+        @media screen and (max-width: $screen-md - 1) {
+          margin-bottom: 8px;
+        }
+
+        // @media screen and (max-width: $screen-sm - 1) {
+        //   display: inline-block;
+        // }
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &-line {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
