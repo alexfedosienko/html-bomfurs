@@ -205,7 +205,7 @@ $(document).ready(function() {
   });
   $('body').on('click', '.picture-viewer__slide-link', function(e) {
     e.preventDefault();
-    let src = $(this).data('full-src');
+    var src = $(this).data('full-src');
     if (!src.length) return;
     $('.picture-viewer__slide-link').removeClass('active');
     $(this).addClass('active');
