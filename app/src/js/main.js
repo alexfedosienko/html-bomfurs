@@ -25,7 +25,12 @@ $(document).ready(function() {
   // END Модалки
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
-  $('.top-sale-slider').slick({
+  $('.top-sale-slider__wrapper').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+    $('.top-sale-slider .current').text((currentSlide || 0) + 1);
+    $('.top-sale-slider .max').text(slick.slideCount);
+  });
+
+  $('.top-sale-slider__wrapper').slick({
     dots: false,
     arrows: false,
     autoplay: true,
