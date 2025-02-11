@@ -58,4 +58,19 @@
       transform: scale(1);
     }
   }
+
+  // fix products in slider
+  // исправление карточки товара в слайдере
+  .slick-slide {
+
+    margin-right: 4px;
+
+    .product-item__pic--second {
+      display: none;
+    }
+
+    .product-item__pics-wrapper {
+      display: block;
+    }
+  }
 }

@@ -10,22 +10,22 @@
   grid-column-gap: 4px;
 
   &.g-3 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 33.3%);
 
     @media screen and (max-width: $screen-md - 1) {
       grid-row-gap: 20px;
     }
 
     @media screen and (max-width: $screen-sm - 1) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 50%);
     }
   }
 
   &.g-4 {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
 
     @media screen and (max-width: $screen-lg - 1) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 33.3%);
     }
 
     @media screen and (max-width: $screen-md - 1) {
@@ -33,7 +33,12 @@
     }
 
     @media screen and (max-width: $screen-sm - 1) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 50%);
     }
   }
+
+  .product-item__pics-wrapper {
+    display: none;
+  }
+
 }

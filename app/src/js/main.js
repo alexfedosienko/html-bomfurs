@@ -42,6 +42,17 @@ $(document).ready(function() {
     autoplaySpeed: 1500,
   });
 
+  $('.catalog-grid .product-item__pics-wrapper').slick({
+    dots: true,
+    arrows: true,
+    autoplay: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    prevArrow: '<button class="prev"></button>',
+    nextArrow: '<button class="next"></button>',
+  });
+
   $('.catalog-slider').slick({
     dots: false,
     arrows: true,
