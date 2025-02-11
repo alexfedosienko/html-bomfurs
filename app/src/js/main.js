@@ -2,6 +2,20 @@ $(document).ready(function() {
   $('img[data-src]').each(function(i,img) { img.src = img.dataset.src });
   $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-99-99"});
 
+
+  $('body').on('click', '.scroll-to-screen', function(e) {
+    e.preventDefault();
+    var screen = $(this).data('screen');
+
+    if (screen) {
+      $('html, body').animate({
+        scrollTop: $(screen).offset().top
+      }, 200, "linear", function() {
+        scrolling = false;
+      });
+    }
+  })
+
   ////////////////////////////////////////////////////////////////////////////////////////////////
   // Модалки
 
