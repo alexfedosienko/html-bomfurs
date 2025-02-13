@@ -78,6 +78,13 @@
     align-items: center;
   }
 
+  &__info-col {
+
+    &:nth-child(1) {
+      width: 100%;
+    }
+  }
+
   &__favorite-btn {
     display: inline-block;
     padding: 4px 4px;

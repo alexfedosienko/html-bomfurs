@@ -107,29 +107,27 @@
     display: flex;
   }
 
-  &__block {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
     &:not(:last-child) {
       margin-right: 64px;
     }
   }
 
-  &__title {
-    font-size: 14px;
-    line-height: 130%;
-    font-weight: 500;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-
-  &__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
   &__item {
     margin-bottom: 4px;
+
+    span {
+      font-size: 14px;
+      line-height: 130%;
+      font-weight: 500;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      display: block;
+    }
   }
 
   &__link {

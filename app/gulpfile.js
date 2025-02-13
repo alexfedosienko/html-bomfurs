@@ -69,10 +69,10 @@ const buildHtml = () => {
       basepath: '@file',
     }))
     .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
-    .pipe(htmlmin({
-      collapseWhitespace: true,
-      removeComments: true
-    }))
+    // .pipe(htmlmin({
+    //   collapseWhitespace: true,
+    //   removeComments: true
+    // }))
     .pipe(browserSync.reload({ stream: true }))
     .pipe(gulp.dest(dirs.build));
 }

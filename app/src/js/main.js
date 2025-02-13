@@ -206,6 +206,14 @@ $(document).ready(function() {
     $(this).closest('.dropdown').removeClass('dropdown--open');
   });
 
+  $(document).mouseup(function(e) {
+    var dropdown = $(".dropdown"); // тут указываем ID элемента
+    // если клик был не по нашему блоку и не по его дочерним элементам
+    if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0 ) {
+      $('.dropdown').removeClass('dropdown--open');
+    }
+  });
+
   $('body').on('click', '.catalog-filter__title', function(e) {
     e.preventDefault();
     $(this).closest('.catalog-filter__block').toggleClass('catalog-filter__block--open');
