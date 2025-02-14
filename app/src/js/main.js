@@ -306,9 +306,9 @@ $(document).ready(function() {
     $('.picture-viewer__wrapper').css("background-image", "url('" + src + "')");
   });
 
-  $('body').on('click', '.product-item__favorite-btn, .page-product__favorite-btn', function(e) {
-    e.preventDefault();
-    $(this).find('.icon--favorite').toggleClass('active');
-  });
+  // $('body').on('click', '.product-item__favorite-btn, .page-product__favorite-btn', function(e) {
+  //   e.preventDefault();
+  //   $(this).find('.icon--favorite').toggleClass('active');
+  // });
 
 });
