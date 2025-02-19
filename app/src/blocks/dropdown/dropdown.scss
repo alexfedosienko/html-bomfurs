@@ -38,7 +38,7 @@
 
     #{$block-name}__items {
       opacity: 1;
-      height: initial;
+      max-height: 400px;
     }
 
     #{$block-name}__title {
@@ -56,12 +56,16 @@
     right: 0;
     top: 20px;
     overflow: hidden;
-    height: 0;
+    max-height: 0;
     padding: 10px 12px;
     background-color: #fff;
     box-shadow: 0px 20px 30px 0px rgba(34, 60, 80, 0.1);
     min-width: 230px;
     max-width: 230px;
+
+    transition-property: max-height, opacity;
+    transition-duration: 0.5s, 0.1s;
+    transition-timing-function: linear;
   }
 
   &__item {
