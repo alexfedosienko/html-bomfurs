@@ -111,7 +111,7 @@ $(document).ready(function() {
     autoplay: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    infinite: false,
+    infinite: true,
     prevArrow: '<button class="prev"></button>',
     nextArrow: '<button class="next"></button>',
   });
