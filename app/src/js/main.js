@@ -19,10 +19,11 @@ $(document).ready(function() {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 40) {
       $('.top-sale-slider').css('position', 'initial');
-      $('.page-header').css('top', 0);
+
+      $('.page-header').addClass('page-header--fixed');
     } else {
       $('.top-sale-slider').css('position', 'fixed');
-      $('.page-header').css('top', '40px');
+      $('.page-header').removeClass('page-header--fixed');
     }
   });
 
