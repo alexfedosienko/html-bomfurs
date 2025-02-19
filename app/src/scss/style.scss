@@ -277,6 +277,11 @@ img {
     z-index: 100;
     background-color: rgba(242, 242, 242, 0.75);
   }
+
+  &--open-dropdown {
+    z-index: 50;
+    background-color: rgba(242, 242, 242, 0.75);
+  }
 }
 
 .radio-group {

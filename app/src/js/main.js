@@ -185,11 +185,11 @@ $(document).ready(function() {
   $('body')
     .on('mouseenter', '.page-header__menu-item--dropdown', function () {
       $(this).find('.dropdown-menu').addClass('dropdown-menu--open');
-      $('.page-backdrop').addClass('page-backdrop--open');
+      $('.page-backdrop').addClass('page-backdrop--open-dropdown');
     })
     .on('mouseleave', '.page-header__menu-item--dropdown', function () {
       $(this).find('.dropdown-menu').removeClass('dropdown-menu--open');
-      $('.page-backdrop').removeClass('page-backdrop--open');
+      $('.page-backdrop').removeClass('page-backdrop--open-dropdown');
     });
 
   $('body').on('click', '.dropdown__title', function(e) {
