@@ -31,6 +31,17 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+
+
+        .dropdown {
+
+          &:nth-child(2) {
+
+            .dropdown__items {
+              left: auto;
+            }
+          }
+        }
       }
 
       &:nth-child(2) {
