@@ -32,6 +32,19 @@
       font-size: 14px;
       line-height: 130%;
     }
+
+    &.error {
+      border-bottom-color: red;
+      color: red;
+
+      &::placeholder {
+        color: red;
+      }
+    }
+
+    & + span.error {
+      color: red;
+    }
   }
 
   &__description {

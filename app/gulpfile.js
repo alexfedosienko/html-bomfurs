@@ -28,6 +28,7 @@ const addJsBefore = [
   './node_modules/slick-carousel/slick/slick.min.js',
   './node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js',
   './node_modules/nouislider/dist/nouislider.min.js',
+  './node_modules/jquery-validation/dist/jquery.validate.min.js'
 ];
 
 const dirs = {
