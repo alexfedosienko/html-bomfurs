@@ -37,6 +37,7 @@
     position: relative;
     transform: translateX(100%);
     transition: transform 0.2s ease;
+    position: relative;
 
     @media screen and (max-width: 770px) {
       width: 100%;

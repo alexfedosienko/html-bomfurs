@@ -1,0 +1,60 @@
+// В этом файле должны быть стили для БЭМ-блока loader, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+$gray-lighter: #000;
+$gray-lightest:               hsl(0, 0%, 90%) !default;
+
+$gray-lighter_2: yellow;
+$gray-lightest_2:               hsl(0, 0%, 90%) !default;
+
+.loader {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline-block;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 4px solid $gray-lightest;
+    border-top: 4px solid $gray-lighter;
+    border-radius: 50%;
+    animation: loader-rotate .8s ease-in-out infinite;
+  }
+
+  // &--btn {
+  //   &:before {
+  //     width: 16px;
+  //     height: 16px;
+  //     margin-right: 5px;
+  //     border: 2px solid $gray-lightest_2;
+  //     border-top: 2px solid $gray-lighter_2;
+  //   }
+  // }
+}
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 101;
+  display: none;
+}
+
+.loader-center {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes loader-rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
