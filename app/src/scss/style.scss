@@ -343,6 +343,10 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    span {
+      text-transform: uppercase;
+    }
   }
 
   &__head-img {
