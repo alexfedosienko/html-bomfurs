@@ -131,6 +131,20 @@
     overflow: hidden;
     width: 168px;
   }
+
+  &__basket {
+    position: relative;
+
+    .cnt {
+      position: absolute;
+      display: inline-block;
+      font-size: 10px;
+      font-size: 10px;
+      top: calc(50% - 7px);
+      left: calc(50% - 3px);
+      font-weight: 500;
+    }
+  }
 }
 
 .dropdown-menu {
