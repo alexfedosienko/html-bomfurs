@@ -274,15 +274,15 @@ $(document).ready(function() {
   //   $(this).find('.icon--favorite').toggleClass('active');
   // });
 
-  $("body").on("click", ".tabs__link", function(e) {
+  $('body').on('click', '.tabs__link', function(e) {
     e.preventDefault();
-    const tabId = `#tab-${$(this).data("tab-id")}`;
-    $(this).closest(".tabs").find(".tabs__link").removeClass("active");
-    $(this).addClass("active");
+    var tabId = '#tab-' + $(this).data('tab-id');
+    $(this).closest('.tabs').find('.tabs__link').removeClass('active');
+    $(this).addClass('active');
 
     if ($(tabId).length == 1) {
-      $(this).closest(".tabs").find(".tabs__page").removeClass("active");
-      $(tabId).addClass("active");
+      $(this).closest('.tabs').find('.tabs__page').removeClass('active');
+      $(tabId).addClass('active');
     }
   });
 });
