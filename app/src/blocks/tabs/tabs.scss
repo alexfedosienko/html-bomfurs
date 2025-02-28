@@ -5,73 +5,58 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 23px;
-  }
+  &__links {
 
-  &__pages {
-    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    display: flex;
+    list-style: none;
+    justify-content: center;
 
-    @media screen and (max-width: $screen-lg - 1) {
-      flex-direction: column;
-    }
+    // @media screen and (max-width: $screen-md - 1) {
+    //   justify-content: center;
+    //   align-items: center;
+    // }
   }
 
   &__item {
-    padding: 0;
-    margin: 0;
-    margin-right: 28px;
+    margin: 0 5px;
 
-    @media screen and (max-width: $screen-lg - 1) {
-      margin-right: 0;
-      margin-bottom: 8px;
-    }
-
-    &--active {
-
-      #{$block-name}__link {
-        color: #022435;
-      }
+    @media screen and (max-width: $screen-md - 1) {
+      margin: 0 5px 8px 0;
     }
   }
 
   &__link {
-    font-size: 42px;
+    display: inline-block;
+    padding: 4px 0;
+    font-size: 14px;
     line-height: 130%;
-    color: rgba(2, 36, 53, 0.1);
-    font-weight: 700;
+    text-transform: uppercase;
     transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
 
     &:hover {
-      color: #022435;
+      opacity: 0.7;
+      // border-bottom: 1px solid #000;
     }
 
-    @media screen and (max-width: $screen-lg - 1) {
-      font-size: 32px;
+    &.active {
+      font-weight: 500;
+      border-bottom: 2px solid #000;
     }
 
-    @media screen and (max-width: $screen-sm - 1) {
-      font-size: 26px;
+    @media screen and (max-width: $screen-md - 1) {
+      font-size: 13px;
     }
   }
 
   &__page {
-    height: 0;
-    opacity: 0;
-    z-index: -100;
-    overflow: hidden;
+    display: none;
 
-    &--active {
-      height: auto;
-      opacity: 1;
-      overflow: auto;
-      z-index: 1;
+    &.active {
+      display: block;
     }
   }
 }
