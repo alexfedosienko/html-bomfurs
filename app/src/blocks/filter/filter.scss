@@ -13,6 +13,29 @@
     }
   }
 
+  &--mobile {
+    display: none;
+    padding: 20px;
+
+    @media screen and (max-width: $screen-md - 1) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #{$block-name}__link {
+
+
+      &:nth-child(1) {
+        padding-right: 0;
+        margin: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
   &__wrap {
     display: flex;
     justify-content: space-between;
