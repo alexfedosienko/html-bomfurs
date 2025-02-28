@@ -27,45 +27,6 @@ $(document).ready(function() {
     }
   });
 
-  // $(document).bind('mousewheel DOMMouseScroll', function(e) {
-  //   console.log(e.originalEvent);
-  //   // console.log({
-  //   //   clientX: e.originalEvent.clientX,
-  //   //   clientY: e.originalEvent.clientY,
-
-  //   //   offsetX: e.originalEvent.offsetX,
-  //   //   offsetY: e.originalEvent.offsetY,
-
-  //   //   pageX: e.originalEvent.pageX,
-  //   //   pageY: e.originalEvent.pageY,
-
-  //   // })
-  // });
-
-  // var num = 1;
-  // var scrolling = false;
-
-  // function scroll(event) {
-  //   event.preventDefault();
-  //   if (!scrolling) {
-  //     scrolling = true;
-  //     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-  //       num--;
-  //       num = num < 1 ? 1 : num;
-  //     } else {
-  //       num++;
-  //       num = num > $(".screen").length ? $(".screen").length : num;
-  //     }
-
-  //     $('html, body').animate({
-  //       scrollTop: $(".screen" + num).offset().top
-  //     }, 500, "linear", function() {
-  //       scrolling = false;
-  //     });
-  //   }
-  // }
-
-
   ////////////////////////////////////////////////////////////////////////////////////////////////
   // Модалки
 
@@ -307,6 +268,7 @@ $(document).ready(function() {
     $('.picture-viewer__wrapper').css("background-image", "url('" + src + "')");
   });
 
+  // DEV ONLY
   // $('body').on('click', '.product-item__favorite-btn, .page-product__favorite-btn', function(e) {
   //   e.preventDefault();
   //   $(this).find('.icon--favorite').toggleClass('active');
