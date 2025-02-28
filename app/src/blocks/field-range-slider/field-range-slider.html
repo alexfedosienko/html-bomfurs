@@ -13,9 +13,21 @@
 
 -->
 <div class="field-range-slider">
+  <input type="hidden" id="input-min">
+  <input type="hidden" id="input-max">
   <div class="field-range-slider__values">
     <span class="field-range-slider__value" id="min">10 000 ₽</span>
     <span class="field-range-slider__value" id="max">150 000 ₽</span>
   </div>
-  <div class="range-slider" data-min="0" data-max="1000" data-start="0" data-end="1000" data-left-indicator=".field-range-slider #min" data-right-indicator=".field-range-slider #max"></div>
+  <div class="range-slider"
+    data-min="0"
+    data-max="1000"
+    data-start="0"
+    data-end="1000"
+    data-left-indicator=".field-range-slider #min"
+    data-left-input=".field-range-slider #input-min"
+    data-right-indicator=".field-range-slider #max"
+    data-right-input=".field-range-slider #input-max"
+  >
+  </div>
 </div>

@@ -195,8 +195,10 @@ $(document).ready(function() {
     if ($(indicator).length) {
       $(indicator).text(value + ' ₽');
     }
+  }
 
-    if ($('input' + indicator).length) {
+  function setInputValue(indicator, value) {
+    if ($(indicator).length) {
       $(indicator).val(value);
     }
   }
@@ -213,6 +215,8 @@ $(document).ready(function() {
     item.noUiSlider.on('update', function(values, handle) {
       setIndicatorValue($(item).data('left-indicator'), values[0]);
       setIndicatorValue($(item).data('right-indicator'), values[1]);
+      setInputValue($(item).data('left-input'), values[0]);
+      setInputValue($(item).data('right-input'), values[1]);
     });
   });
 
