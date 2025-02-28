@@ -19,17 +19,20 @@
 
     @media screen and (max-width: $screen-md - 1) {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     #{$block-name}__link {
-
 
       &:nth-child(1) {
         padding-right: 0;
         margin: 0;
 
         &:after {
+          display: none;
+        }
+
+        @media screen and (max-width: $screen-md - 1) {
           display: none;
         }
       }
