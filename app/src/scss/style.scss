@@ -274,6 +274,13 @@ img {
       margin-bottom: 8px;
     }
   }
+
+  &--price {
+
+    #{$block-name}__content {
+      padding-bottom: 20px;
+    }
+  }
 }
 
 .page-backdrop {
