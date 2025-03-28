@@ -116,6 +116,12 @@ $(document).ready(function() {
     $('.page-backdrop').addClass('page-backdrop--open');
     $('#' + slider).addClass('right-slider--open');
     $('body').addClass('stop-scroll');
+
+    if ($('.mobile-menu').hasClass('mobile-menu--toggle')) {
+      $('.mobile-menu').removeClass('mobile-menu--toggle');
+      $('.burger').removeClass('burger--toggle');
+    }
+
   });
 
   $('body').on('click', '.right-slider .close, [data-rslider-close]', function(e) {
@@ -186,7 +192,7 @@ $(document).ready(function() {
 
   $('body').on('click', '.burger', function(e) {
     e.preventDefault();
-    $(this).toggleClass('burger--toggle');
+    $('.burger').toggleClass('burger--toggle');
     $('.mobile-menu').toggleClass('mobile-menu--toggle');
   });
 
