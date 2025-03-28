@@ -16,6 +16,10 @@
 
   transition: top 0.4s ease;
 
+  &--main-page {
+    backdrop-filter: blur(10px);
+  }
+
   &--fixed {
     top: 0 !important;
 
